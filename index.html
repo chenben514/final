@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style_quiz.css" />    
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+    <title>trillo &mdash; Your all-in-one booking app</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img src="img/BenLogo.png" alt="BenStudy logo" class="logo" />
+        <span class="logo__name">Ben 的學習網</span>
+
+        <form action="#" class="search">
+          <input type="text" class="search__input" placeholder="搜尋主題" />
+          <button class="search__button">
+            <svg class="search__icon">
+              <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+            </svg>
+          </button>
+        </form>
+
+        <nav class="user-nav">
+          <div class="user-nav__user">
+            <img
+              src="img/hojun-modified.png"
+              alt="User photo"
+              class="user-nav__user-photo"
+            />
+            <span class="user-nav__user-name">Ben</span>
+          </div>
+        </nav>
+      </header>
+
+      <div class="content">
+        <nav class="sidebar">
+          <ul class="side-nav">
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link" id="chinese">
+                國語
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link"  id="english">
+                英語
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link"  id="japan">
+                日語
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#"  class="side-nav__link" id="korean">
+                韓語
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link" id="math">
+                數學
+              </a>
+            </li>
+          </ul>
+
+          <div class="legal">Copyright &copy; 2022 by Ben 版權所有</div>
+        </nav>
+
+        <main class="main_subj-view">
+          <div class="main_subj"  style="background-color:#D9D7F1">
+          </div> <!-- main_subj-->
+          <div class="mid_subj"  style="background-color:lightyellow">
+          </div> 
+
+          <!-- <div class="detail"   style="background-color:lightyellow">
+            <div class="detail-left-side">
+            <img class="category" src="img/hangul_writing.png" alt="category"/>
+              <div class="mid_subj">
+                <u>漢字拼寫</u>
+              </div>
+            </div> 
+            <div class="detail-right-side"   style="background-color:#E7FBBE">
+              <button class="test-button">綜合<br>★☆☆</button>
+              <button class="test-button test-finish">人體1<br>★☆☆</button>
+              <button class="test-button test-pass">家人1<br>★☆☆</button>
+              <button class="test-button test-no-pass">星期<br>☆☆☆</button>
+              <button class="test-button test-button-lock">🔒</button>
+              <button class="test-button test-button-lock">🔒</button>
+              <br>
+            </div> 
+          </div>  -->
+        </main>
+
+    </div>
+
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+      <header>
+        <div class="title">Ben 的測驗程式</div>
+
+        <div class="timer">
+          <div class="time_left_txt">還剩</div>
+          <div class="timer_sec">30</div>
+          <div class="time_left_txt">秒</div>
+        </div>
+        <div class="time_line"></div>
+      </header>
+      <section>
+        <div class="que_text">
+          <!-- Here I've inserted question from JavaScript -->
+        </div>
+        <div class="option_list">
+          <!-- Here I've inserted options from JavaScript -->
+        </div>
+        <div class="select_list">
+          <!-- Here I've inserted options from JavaScript -->
+        </div>
+      </section>
+
+      <!-- footer of Quiz Box -->
+      <footer>
+        <div class="total_que">
+          <!-- Here I've inserted Question Count Number from JavaScript -->
+        </div>
+        <button class="next_btn">下一題</button>
+        <button class="quit_btn">放棄測驗</button>        
+      </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+      <div class="icon">
+        <!-- Here I've inserted Score Result from JavaScript -->
+      </div>
+      <div class="complete_text">你完成測驗了!</div>
+      <div class="score_text">
+        <!-- Here I've inserted Score Result from JavaScript -->
+      </div>
+      <div class="buttons">
+        <button class="restart">重新作答</button>
+        <button class="quit">離開測驗</button>
+      </div>
+
+
+    </div>
+
+    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+    <script>var curCourse; </script>
+    <script src="js/show_topic.js"></script>
+
+    <script src="js/store_hist.js"></script>
+
+    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
