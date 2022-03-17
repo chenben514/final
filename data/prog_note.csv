@@ -1,0 +1,30 @@
+
+### 功能開發
+- 1. 讀入 korean_topic 呈現內容
+    
+- 2. 拼寫題型
+- 3. 填星功能
+   --> 答對加 1 顆星，答錯扣到 0 顆星
+   --> 答對0顆星(test-no-pass),1-2顆星(test-pass),3顆星(test-finish)，呈現不同顏色
+   --> (X) 只要沒有0顆星的話，就解鎖一個項目
+X 4. 聽寫題型
+- 5. 記憶功能
+   --> 記憶上次選擇科目，主題，題型
+   --> 記憶目前使用者姓名  
+
+### Bug
+
+    
+
+=== backup
+1. pagination
+              <!-- <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a class="active" href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+              </div> page -->
