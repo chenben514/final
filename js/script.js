@@ -10,6 +10,8 @@ const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 const userName = document.querySelector(".user-nav__user-name");
+const content = document.querySelector(".content");
+const sideBar = document.querySelector(".sidebar");
 let curQuiz = "";
 let ansQuesCnt = 0;
 let quizType = "";
@@ -177,6 +179,8 @@ function getQuestions() {
   //ben_test
   // var selFile =
   //   "./data/" + currentSubject + "_" + currentTopic + "_" + 0 + ".csv";
+  // alert(container.clientWidth);
+
   var curQuizArr = curQuiz.split("-");
   cursubject = curQuizArr[1].split("_")[0];
   correctCnt = 0;
@@ -378,6 +382,8 @@ function confirmClick() {
 
 // getting questions and options from array
 function showQuestions(index) {
+  content.classList.add("slight_opacity");
+
   const que_text = document.querySelector(".que_text");
   ansQuesCnt++;
   nowCursorFocus = 0;
