@@ -1,3 +1,8 @@
+/* 可改動區域 ---- 商業邏輯 ----- */
+:root {
+  --desktop-btn-size: 22px;
+  --phone-btn-size: 13px;
+}
 /* importing google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 * {
@@ -9,6 +14,19 @@
 
 body {
   background: #007bff;
+}
+
+.slight_opacity {
+  opacity: 0.1;
+}
+
+.btn_layout {
+  font-size: var(--desktop-btn-size);
+}
+@media (max-width: 600px) {
+  .btn_layout {
+    font-size: var(--phone-btn-size);
+  }
 }
 
 ::selection {
@@ -107,13 +125,28 @@ body {
 }
 
 .quiz_box {
-  width: 550px;
+  width: 60%;
   background: #fff;
+  /* background: #000; */
   border-radius: 5px;
   transform: translate(-50%, -50%) scale(0.9);
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
+  /* z-index: 0; */
+}
+@media (max-width: 600px) {
+  .quiz_box {
+    width: 100%;
+    background: #fff;
+    /* background: #000; */
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    /* z-index: 0; */
+  }
 }
 
 .quiz_box header {
@@ -178,6 +211,7 @@ body {
 section {
   padding: 25px 30px 20px 30px;
   background: #fff;
+  /* background: #000; */
 }
 
 section .que_text {
@@ -315,7 +349,8 @@ footer .total_que span p:first-child {
 footer button {
   height: 40px;
   padding: 0 13px;
-  font-size: 18px;
+  /* font-size: 18px; */
+  font-size: 1rem;
   font-weight: 400;
   cursor: pointer;
   border: none;
