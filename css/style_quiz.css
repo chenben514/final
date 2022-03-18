@@ -26,6 +26,7 @@ body {
 @media (max-width: 600px) {
   .btn_layout {
     font-size: var(--phone-btn-size);
+    padding: 10px;
   }
 }
 
