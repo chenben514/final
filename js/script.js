@@ -275,14 +275,27 @@ function getQuestions() {
       var tmpQues = singQuesArr[0];
       var tmpStart = tmpQues.indexOf("[");
       var tmpEnd = tmpQues.indexOf("]");
+
       question.question =
-        tmpQues.substr(0, tmpStart - 1) +
-        "[" +
-        "X".repeat(tmpEnd - tmpStart - 1) +
+        '<span style="color:blue;font-size:20px;">' +
+        tmpQues.substr(0, tmpStart) +
+        "[";
+
+      for (var z = 0; z < tmpEnd - tmpStart - 1; z++) {
+        if (tmpQues.substr(tmpStart + z + 1, 1) == " ")
+          question.question = question.question + "_";
+        else question.question = question.question + "X";
+      }
+
+      question.question =
+        question.question +
         "]" +
         tmpQues.substr(tmpEnd + 1, tmpQues.length - tmpEnd - 1) +
-        ":" +
-        singQuesArr[1];
+        "</span> : " +
+        '<span style="color:grey;font-size:20px;">' +
+        singQuesArr[1] +
+        "</span>";
+
       question.quizType = "spell";
       question.answer = tmpQues.substr(tmpStart + 1, tmpEnd - tmpStart - 1);
     } else if (singQuesArr[2] == "--") {
