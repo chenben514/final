@@ -19,6 +19,7 @@ english,grammer,combo,綜合,choose,100,100題
 ### 韓文
 korean,word,topik_b,TOPIK_初級,choose,all,基本123,k,ㄱ型243,n,ㄴ型91,t,ㄷ型133,m,ㅁ型120,p,ㅂ型144,s,ㅅ型218,o,ㅇ型306,ss,ㅈ型197,other,其他269
 korean,word,topik_m,TOPIK_中級,choose,k,ㄱ型551,n,ㄴ型148,t,ㄷ型333,m,ㅁ型272,p,ㅂ型370,s,ㅅ型515,o,ㅇ型316,ss,ㅈ型442,other,其他556
+korean,grammer,topik51_b,TOPIK_51題型,choose,10,基本10題
 
 #korean,grammer,topic,TOPIC題型,choose,100,100題
 #listen,spell_word,聽音拼寫
