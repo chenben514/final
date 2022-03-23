@@ -80,31 +80,41 @@ function showTopic() {
     first_subj = subject_view.firstElementChild;
   }
 
+  var bCourse = false;
+
   for (i = 0; i < topics.length; i++) {
     if (topics[i].course != curCourse) continue;
-    // if (topics[i].main_subj == curMainSubj) continue;
-
     var curFigure = document.createElement("figure");
-    if (topics[i].main_subj != curMainSubj)
-      curFigure.setAttribute("class", "main_subj__item");
-    else
-      curFigure.setAttribute(
-        "class",
-        "main_subj__item main_subj__item--active"
+
+    // if (topics[i].main_subj == curMainSubj) continue;
+    if (
+      bCourse == false ||
+      (i > 0 && topics[i - 1].main_subj != topics[i].main_subj)
+    ) {
+      bCourse = true;
+      // var curFigure = document.createElement("figure");
+      if (topics[i].main_subj != curMainSubj)
+        curFigure.setAttribute("class", "main_subj__item");
+      else
+        curFigure.setAttribute(
+          "class",
+          "main_subj__item main_subj__item--active"
+        );
+
+      // curFigure.setAttribute("id", topics[i].main_subj);
+
+      var curImg = document.createElement("img");
+      curImg.setAttribute(
+        "src",
+        "img/empty_book_128_" + topics[i].main_subj + ".png"
       );
+      curImg.setAttribute("class", "main_subj__photo");
+      curImg.setAttribute("id", topics[i].main_subj);
+      curSubj = topics[i].main_subj;
 
-    // curFigure.setAttribute("id", topics[i].main_subj);
-
-    var curImg = document.createElement("img");
-    curImg.setAttribute(
-      "src",
-      "img/empty_book_128_" + topics[i].main_subj + ".png"
-    );
-    curImg.setAttribute("class", "main_subj__photo");
-    curImg.setAttribute("id", topics[i].main_subj);
-    curSubj = topics[i].main_subj;
-
-    curFigure.appendChild(curImg);
+      curFigure.appendChild(curImg);
+      // topic_view.appendChild(curFigure);
+    }
     topic_view.appendChild(curFigure);
 
     // 2. show mid_subj view
