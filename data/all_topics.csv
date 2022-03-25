@@ -7,19 +7,28 @@
 #     spell[問題1][tab][答案]
 #     listen[問題音檔][tab][題目][tab][答案]
 #     graph[問題圖檔][tab][答案1][tab][答案2][tab][答案3][tab][答案4]
+#     audio[問題1][tab][答案]
 ###
+# 學科，大項目，開放課程數，中項目代號，中項目解釋，題目類型,小項目，小項目解釋...
 ### 中文
-chinese,word,combo,字詞_初級,choose,21,21題
+chinese,word,999,combo,字詞_初級,choose,21,21題
+chinese,listen,5,recorder,詞語錄音機,audio,1,10題,2,100題
+chinese,listen,5,easy,EasyTaiwanese,conversation,1,做什麼
 
 ### 英文
-english,word,200,英語小達人,choose,small,200字
-english,word,7000,7000單字,choose,1,等級1 1634,2,等級2 1462,3,等級3 1456,4,等級4 252,5,等級5 2589,6,等級6 1328
-english,grammer,combo,綜合,choose,100,100題
+english,word,999,200,英語小達人,choose,small,200字
+english,word,999,7000,7000單字,choose,1,等級1 1634,2,等級2 1462,3,等級3 1456,4,等級4 252,5,等級5 2589,6,等級6 1328
+english,listen,5,recorder,詞語錄音機,audio,1,10題,2,100題
+
+### 日文
+japan,listen,5,recorder,詞語錄音機,audio,1,10題,2,100題
 
 ### 韓文
-korean,word,topik_b,TOPIK_初級,choose,all,基本123,k,ㄱ型243,n,ㄴ型91,t,ㄷ型133,m,ㅁ型120,p,ㅂ型144,s,ㅅ型218,o,ㅇ型306,ss,ㅈ型197,other,其他269
-korean,word,topik_m,TOPIK_中級,choose,k,ㄱ型551,n,ㄴ型148,t,ㄷ型333,m,ㅁ型272,p,ㅂ型370,s,ㅅ型515,o,ㅇ型316,ss,ㅈ型442,other,其他556
-korean,grammer,topik51_b,TOPIK_51題型,choose,10,基本10題
+korean,word,3,topik_b,TOPIK_初級,choose,all,基本123,k,ㄱ型243,n,ㄴ型91,t,ㄷ型133,m,ㅁ型120,p,ㅂ型144,s,ㅅ型218,o,ㅇ型306,ss,ㅈ型197,other,其他269
+korean,word,3,topik_m,TOPIK_中級,choose,k,ㄱ型551,n,ㄴ型148,t,ㄷ型333,m,ㅁ型272,p,ㅂ型370,s,ㅅ型515,o,ㅇ型316,ss,ㅈ型442,other,其他556
+korean,writing,3,topik51_b,TOPIK_51題型,choose,1,基本1_10,2,基本2_12,p1,敬語1_14
+korean,listen,5,recorder,詞語錄音機,audio,1,10題,2,100題
+korean,listen,5,new_4_2,新視線韓語4_2,conversation,1,節省,2,花費調查,3,購物網站
 
 #korean,grammer,topic,TOPIC題型,choose,100,100題
 #listen,spell_word,聽音拼寫
