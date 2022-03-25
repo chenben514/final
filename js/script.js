@@ -28,7 +28,6 @@ for (let i = 0; i < subject_links.length; i++) {
 }
 
 function setCourse() {
-  // alert("ben_debug_29");
   var preElement = document.getElementById(curCourse).parentNode;
   preElement.classList.remove("side-nav__item--active");
 
@@ -42,7 +41,6 @@ function setCourse() {
   //0.3. Set Main Subject
   const main_subject_links = document.querySelectorAll(".main_subj__photo");
   for (let i = 0; i < main_subject_links.length; i++) {
-    // alert("ben_debug:52" + main_subject_links[i].id);
     main_subject_links[i].addEventListener("click", setMainSubject);
   }
 
@@ -51,17 +49,20 @@ function setCourse() {
   for (let i = 0; i < small_test_links.length; i++) {
     small_test_links[i].addEventListener("click", startQuiz);
   }
+
+  let small_wrong_links = document.querySelectorAll(".wrong-button");
+  for (let i = 0; i < small_wrong_links.length; i++) {
+    small_wrong_links[i].addEventListener("click", startWrong);
+  }
 }
 
 //0.2. Set Last Course
-// alert(curCourse);
 var element = document.getElementById(curCourse).parentNode;
 element.classList.add("side-nav__item--active");
 
 //0.3. Set Main Subject
 const main_subject_links = document.querySelectorAll(".main_subj__photo");
 for (let i = 0; i < main_subject_links.length; i++) {
-  // alert("ben_debug:52" + main_subject_links[i].id);
   main_subject_links[i].addEventListener("click", setMainSubject);
 }
 
@@ -86,6 +87,11 @@ function setMainSubject() {
   for (let i = 0; i < small_test_links.length; i++) {
     small_test_links[i].addEventListener("click", startQuiz);
   }
+
+  let small_wrong_links = document.querySelectorAll(".wrong-button");
+  for (let i = 0; i < small_wrong_links.length; i++) {
+    small_wrong_links[i].addEventListener("click", startWrong);
+  }
 }
 
 //0.4. Set Small Course
@@ -94,9 +100,23 @@ for (let i = 0; i < small_test_links.length; i++) {
   small_test_links[i].addEventListener("click", startQuiz);
 }
 
+let small_wrong_links = document.querySelectorAll(".wrong-button");
+for (let i = 0; i < small_wrong_links.length; i++) {
+  small_wrong_links[i].addEventListener("click", startWrong);
+}
+
 // if startQuiz button clicked
 function startQuiz() {
   curQuiz = this.id;
+
+  //0.直接聽錄音
+  var curQuizArr = curQuiz.split("-");
+  curQuizType = curQuizArr[0];
+  if (curQuizType == "conversation") {
+    pronClick(curQuizArr[1] + ".m4a");
+    return;
+  }
+
   if (getQuestions() == false) return;
   ansQuesCnt = 0;
   quiz_box.classList.add("activeQuiz"); //show quiz box
@@ -104,6 +124,71 @@ function startQuiz() {
   queCounter(1); //passing 1 parameter to queCounter
   startTimer(quesTimer); //calling startTimer function
   startTimerLine(0); //calling startTimerLine function
+}
+
+function startWrong() {
+  content.classList.add("slight_opacity");
+
+  curQuiz = this.id.substr(0, this.id.length - 5);
+  // content.classList.add("slight_opacity");
+
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  var modalContent = document.getElementsByClassName("modal-content")[0];
+  // When the user clicks on <span> (x), close the modal
+  modal.style.display = "block";
+
+  var curQuizArr = curQuiz.split("-");
+  var selFile = "./data/" + curQuizArr[1] + ".csv";
+
+  if (checkFileExist(selFile) == false) {
+    alert("Quiz file [" + selFile + "] does not exist.");
+    return false;
+  }
+
+  var read = new XMLHttpRequest();
+  read.open("GET", selFile, false);
+  read.setRequestHeader("Cache-Control", "no-cache");
+  read.send();
+
+  var displayName = read.responseText;
+  var quesArr = displayName.replace(/\r\n/g, "\n").split("\n");
+  let quesCnt = quesArr.length;
+  let k = 0;
+
+  modalContent.innerHTML = '<span class="close">&times;</span><p>';
+
+  var wrongStorage = localStorage.getItem(curQuiz + "_wrong");
+  if (wrongStorage == null || wrongStorage == "undefined")
+    wrongStorage = "nothing";
+  let tmpMessage = "";
+  for (let k = 0; k < quesCnt; k++) {
+    if (quesArr[k].length < 2) continue;
+    tmpMessage = k + ",";
+    var checkMessage = "," + tmpMessage;
+    if (!wrongStorage.includes(checkMessage)) {
+      continue;
+    }
+    var curQuizArr = quesArr[k].split("\t");
+    modalContent.innerHTML =
+      modalContent.innerHTML +
+      (k + 1) +
+      ". " +
+      curQuizArr[0] +
+      " : " +
+      curQuizArr[1] +
+      "<br>";
+  }
+  modalContent.innerHTML = modalContent.innerHTML + "</p>";
+  var span = document.getElementsByClassName("close")[0];
+  span.addEventListener("click", closeWrong);
+}
+
+function closeWrong() {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "none";
+  content.classList.remove("slight_opacity");
 }
 
 let timeValue = quesTimer;
@@ -176,17 +261,14 @@ function checkFileExist(urlToFile) {
   }
 }
 function getQuestions() {
-  //ben_test
-  // var selFile =
-  //   "./data/" + currentSubject + "_" + currentTopic + "_" + 0 + ".csv";
-  // alert(container.clientWidth);
-
   var curQuizArr = curQuiz.split("-");
   cursubject = curQuizArr[1].split("_")[0];
   correctCnt = 0;
 
   curQuizType = curQuizArr[0];
+
   var selFile = "./data/" + curQuizArr[1] + ".csv";
+  var displayName;
 
   if (checkFileExist(selFile) == false) {
     alert("Quiz file [" + selFile + "] does not exist.");
@@ -198,7 +280,8 @@ function getQuestions() {
   read.setRequestHeader("Cache-Control", "no-cache");
   read.send();
 
-  var displayName = read.responseText;
+  displayName = read.responseText;
+
   var quesArr = displayName.replace(/\r\n/g, "\n").split("\n");
   var quesList = [];
   let quesCnt = quesArr.length;
@@ -303,6 +386,10 @@ function getQuestions() {
         "[" + "X".repeat(singQuesArr[0].length) + "]" + singQuesArr[1];
       question.answer = singQuesArr[0];
       question.quizType = "spell";
+    } else if (curQuizType == "audio") {
+      question.question = singQuesArr[0];
+      question.answer = singQuesArr[0];
+      question.quizType = "audio";
     } else {
       question.question = singQuesArr[0];
       question.answer = singQuesArr[1];
@@ -330,11 +417,18 @@ function UrlExists(url) {
   return http.status != 404;
 }
 
-function pronClick() {
-  var mp3File = "./audio/" + questions[que_count].question;
+function pronClick(source) {
+  var mp3File = "./audio/" + source;
+
   if (UrlExists(mp3File)) {
-    var audio = new Audio(mp3File);
-    audio.play();
+    var player = document.getElementById("radio");
+    if (player.src.includes("audio")) {
+      player.src = "";
+      player.stop();
+    } else {
+      player.src = mp3File;
+      player.play();
+    }
   } else {
     var msg = new SpeechSynthesisUtterance();
 
@@ -345,38 +439,13 @@ function pronClick() {
     msg.volume = 1;
     msg.rate = 1;
     msg.pitch = 1;
+    if (curCourse == "chinese") msg.lang = "zh-CN";
+    else if (curCourse == "korean") msg.lang = "ko-KR";
+    else if (curCourse == "japan") msg.lang = "ja-JP";
+    else if (curCourse == "english") msg.lang = "en-US";
+    // alert(msg.text);
     window.speechSynthesis.speak(msg);
   }
-  // alert(mp3File);
-  // try {
-  //   var audio = new Audio(mp3File);
-  //   if (isNaN(sound.duration)) alert("Do something");
-  //   audio.play();
-  // } catch {
-  //   alert("no file:" + mp3File);
-  //   var msg = new SpeechSynthesisUtterance();
-
-  //   // Set the text.
-  //   msg.text = questions[que_count].question.replace(".mp3", "");
-
-  //   // Set the attributes.
-  //   msg.volume = 1;
-  //   msg.rate = 1;
-  //   msg.pitch = 1;
-  //   window.speechSynthesis.speak(msg);
-  // }
-
-  // If a voice has been selected, find the voice and set the
-  // utterance instance's voice attribute.
-  /*
-  if (voiceSelect.value) {
-    msg.voice = speechSynthesis.getVoices().filter(function (voice) {
-      return voice.name == voiceSelect.value;
-    })[0];
-  }
-*/
-  // Queue this utterance.
-  // window.speechSynthesis.speak(msg);
 }
 
 function confirmClick() {
@@ -425,15 +494,26 @@ function showQuestions(index) {
     "</span></div>";
   let confirm_button = "";
 
-  if (questions[index].quizType == "spell") {
+  if (
+    questions[index].quizType == "spell" ||
+    questions[index].quizType == "audio"
+  ) {
     curStatus = "spell";
     let answer_target =
       '<div><input type="text" class="direct_input" name="direct_input" id="direct_input" value="" placeholder="輸入答案" style="width:40%;height:40px;font-size:20px;padding:10px;">';
     answer_target +=
       "<span> <button id='confirmButton' onclick='confirmClick()' style='width:70px;height:40px;' >確認</button></span> </div>";
     curQuesType = "direct_input";
-    que_text.innerHTML = questions[index].question; //adding new span tag inside que_tag
+    if (questions[index].quizType == "audio") {
+      que_tag =
+        "<span> 請按右邊發音鈕  <button onclick='pronClick()' class='pronButton' style='width:70px;height:40px;' >發音</button></span>";
+      que_text.innerHTML = que_tag; //adding new span tag inside que_tag
+    } else if (questions[index].quizType == "spell") {
+      que_text.innerHTML = questions[index].question; //adding new span tag inside que_tag
+    }
+
     option_list.innerHTML = answer_target;
+
     document.querySelector(".direct_input").focus();
     document.removeEventListener("keydown", keydown);
   } else {
@@ -480,7 +560,7 @@ function directSelected(userAns, correctAns) {
 
       let answer_target = (option_list.innerHTML =
         option_list.innerHTML +
-        '<div name="answer" style="width:60%;height:40px;font-size:20px;padding:10px;color:blue">' +
+        '<div name="answer" style="width:100%;height:40px;font-size:20px;padding:10px;color:blue">' +
         '<span style="color:blue">' +
         "正確答案：" +
         correctAns +

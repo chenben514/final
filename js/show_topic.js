@@ -1,9 +1,12 @@
+var curProcCnt = 0;
+
 const topic_view = document.querySelector(".main_subj");
 const subject_view = document.querySelector(".mid_subj");
 class Topic {
   numb;
   course;
   main_subj;
+  open_course_cnt;
   mid_subj;
   mid_explain;
   quiz_type;
@@ -52,11 +55,12 @@ function getTopic() {
     topic.numb = i + 1;
     topic.course = singTopicArr[0];
     topic.main_subj = singTopicArr[1];
-    topic.mid_subj = singTopicArr[2];
-    topic.mid_explain = singTopicArr[3];
-    topic.quiz_type = singTopicArr[4];
+    topic.open_course_cnt = singTopicArr[2];
+    topic.mid_subj = singTopicArr[3];
+    topic.mid_explain = singTopicArr[4];
+    topic.quiz_type = singTopicArr[5];
 
-    for (j = 5; j < singTopicArr.length; j += 2) {
+    for (j = 6; j < singTopicArr.length; j += 2) {
       topic.small_subjs.push(singTopicArr[j]);
       topic.small_subj_explains.push(singTopicArr[j + 1]);
     }
@@ -140,6 +144,7 @@ function showTopic() {
     // 2.2. curDetailRight
     var curDetailRight = document.createElement("detail-right-side");
     curDetailRight.setAttribute("class", "detail-right-side");
+    curProcCnt = 0;
     for (j = 0; j < topics[i].small_subjs.length; j++) {
       var curButton = document.createElement("button");
       var c, r, t;
@@ -149,55 +154,58 @@ function showTopic() {
       //1.test button
       r = t.insertRow(0);
       c = r.insertCell(0);
+      var curBaseID =
+        topics[i].quiz_type +
+        "-" +
+        topics[i].course +
+        "_" +
+        topics[i].main_subj +
+        "_" +
+        topics[i].mid_subj +
+        "_" +
+        topics[i].small_subjs[j];
 
       curButton.setAttribute("class", "test-button");
       curButton.setAttribute("background-color", "lightblue");
-      curButton.setAttribute(
-        "id",
-        topics[i].quiz_type +
-          "-" +
-          topics[i].course +
-          "_" +
-          topics[i].main_subj +
-          "_" +
-          topics[i].mid_subj +
-          "_" +
-          topics[i].small_subjs[j]
-      );
-      curButton.innerText = topics[i].small_subj_explains[j];
+      curButton.setAttribute("id", curBaseID);
+      if (curProcCnt >= topics[i].open_course_cnt) {
+        curButton.innerText = "🔒";
+        curButton.disabled = true;
+      } else {
+        curButton.innerText = topics[i].small_subj_explains[j];
+      }
+
       var tmpLevel = getStarLevel(curButton.id);
       if (tmpLevel >= 3) {
         curButton.setAttribute("class", "test-button test-finish");
         curButton.innerText += "😃";
       } else if (tmpLevel > 0) {
         curButton.setAttribute("class", "test-button test-no-pass");
-      }
+      } else curProcCnt++;
 
       c.appendChild(curButton);
 
       //2. wrong button
+      var curWrongStorage;
 
-      // curButton = document.createElement("button");
-      // r = t.insertRow(1);
-      // c = r.insertCell(0);
+      curWrongStorage = localStorage.getItem(curBaseID + "_wrong");
+      // alert("192:" + curBaseID + ":" + curWrongStorage);
 
-      // curButton.setAttribute("class", "wrong-button test-no-pass");
-      // curButton.setAttribute(
-      //   "id",
-      //   topics[i].quiz_type +
-      //     "-" +
-      //     topics[i].course +
-      //     "_" +
-      //     topics[i].main_subj +
-      //     "_" +
-      //     topics[i].mid_subj +
-      //     "_" +
-      //     topics[i].small_subjs[j] +
-      //     "wrong"
-      // );
-      // curButton.innerText = "錯題";
+      if (
+        curWrongStorage != null &&
+        curWrongStorage != "undefined" &&
+        curWrongStorage.length > 2
+      ) {
+        curButton = document.createElement("button");
+        r = t.insertRow(1);
+        c = r.insertCell(0);
 
-      // c.appendChild(curButton);
+        curButton.setAttribute("class", "wrong-button test-no-pass");
+        curButton.setAttribute("id", curBaseID + "wrong");
+        curButton.innerText = "錯題";
+
+        c.appendChild(curButton);
+      }
 
       //3. star
       r = t.insertRow(1);
@@ -232,6 +240,7 @@ function showTopic() {
 function getStarLevel(tmpQuiz) {
   var i;
   var curLevelStorage;
+
   for (i = 3; i > 0; i--) {
     curLevelStorage = localStorage.getItem(curCourse + "_level_" + i);
 
@@ -243,7 +252,6 @@ function getStarLevel(tmpQuiz) {
       prevLevelStorage = curLevelStorage;
       continue;
     }
-
     if (curLevelStorage.includes(tmpQuiz + ";")) {
       break;
     }
