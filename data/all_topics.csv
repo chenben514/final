@@ -28,9 +28,8 @@ korean,word,3,topik_b,TOPIK_初級,choose,all,基本123,k,ㄱ型243,n,ㄴ型91,t
 korean,word,3,topik_m,TOPIK_中級,choose,k,ㄱ型551,n,ㄴ型148,t,ㄷ型333,m,ㅁ型272,p,ㅂ型370,s,ㅅ型515,o,ㅇ型316,ss,ㅈ型442,other,其他556
 korean,writing,3,topik51_b,TOPIK_51題型,choose,1,基本1_10,2,基本2_12,p1,敬語1_14
 korean,listen,5,recorder,詞語錄音機,audio,1,10題,2,100題
-korean,listen,5,new_4_2,新視線韓語4_2,conversation,1,節省,2,花費調查,3,購物網站
+korean,listen,5,new_4_2,新視線韓語4_2,conversation,1,1.1.\節省,2,1.2.\花費調查,3,1.3.\購物網站
 
-#korean,grammer,topic,TOPIC題型,choose,100,100題
-#listen,spell_word,聽音拼寫
-#reading,
-#writing,
+### 學習法
+learn,listen,5,learn,學習如何學習,audio,1,第2章.\兩種學習
+learn,game,5,learn,專注力,game,1,1.\數字方格
