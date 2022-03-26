@@ -316,7 +316,7 @@ body {
 
 .test-button {
   height: 6rem;
-  width: 6rem;
+  width: 8rem;
   font-size: 1.8rem;
   padding: 0.1rem;
   color: blue;
@@ -336,13 +336,15 @@ body {
 .test-pass {
   background-color: lightgreen; }
 
+.test-wrong {
+  background-color: lightpink; }
+
 .wrong-button {
   height: 3rem;
   width: 6rem;
   font-size: 1rem;
   padding: 0.1rem;
-  color: black;
-  background-color: lightpink; }
+  color: black; }
 
 .overview {
   display: flex;
