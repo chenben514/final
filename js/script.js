@@ -1,6 +1,8 @@
+import hello from "./my_game.js";
+window.pronClick = pronClick;
+window.confirmClick = confirmClick;
 //selecting all required elements
 const maxQuesCnt = 500;
-const quesTimer = 30;
 const start_btn = document.querySelector(".test-button");
 const quiz_box = document.querySelector(".quiz_box");
 const result_box = document.querySelector(".result_box");
@@ -12,6 +14,8 @@ const timeCount = document.querySelector(".timer .timer_sec");
 const userName = document.querySelector(".user-nav__user-name");
 const content = document.querySelector(".content");
 const sideBar = document.querySelector(".sidebar");
+const quizWidth = document.querySelector("section").offsetWidth;
+let quesTimer = 15;
 let curQuiz = "";
 let ansQuesCnt = 0;
 let quizType = "";
@@ -20,6 +24,8 @@ let correctCnt = 0;
 let cursubject = "";
 let curLevel = 0;
 let userInputAns = "";
+var curQuizType = "";
+var questions = "";
 
 //0.1. Set Subject
 const subject_links = document.querySelectorAll(".side-nav__link");
@@ -67,10 +73,9 @@ for (let i = 0; i < main_subject_links.length; i++) {
 }
 
 function setMainSubject() {
+  curMainSubj = this.id;
   var preElement = document.getElementById(curMainSubj).parentNode;
   preElement.classList.remove("main_subj__item--active");
-
-  curMainSubj = this.id;
 
   var element = document.getElementById(this.id).parentNode;
   element.classList.add("main_subj__item--active");
@@ -105,6 +110,37 @@ for (let i = 0; i < small_wrong_links.length; i++) {
   small_wrong_links[i].addEventListener("click", startWrong);
 }
 
+function pronClick(source) {
+  var mp3File = "./audio/" + source;
+
+  if (UrlExists(mp3File)) {
+    var player = document.getElementById("radio");
+    if (player.src.includes("audio")) {
+      player.src = "";
+      player.stop();
+    } else {
+      player.src = mp3File;
+      player.play();
+    }
+  } else {
+    var msg = new SpeechSynthesisUtterance();
+
+    // Set the text.
+    msg.text = questions[que_count].question.replace(".mp3", "");
+
+    // Set the attributes.
+    msg.volume = 1;
+    msg.rate = 1;
+    msg.pitch = 1;
+    if (curCourse == "chinese") msg.lang = "zh-CN";
+    else if (curCourse == "korean") msg.lang = "ko-KR";
+    else if (curCourse == "japan") msg.lang = "ja-JP";
+    else if (curCourse == "english") msg.lang = "en-US";
+    // alert(msg.text);
+    window.speechSynthesis.speak(msg);
+  }
+}
+
 // if startQuiz button clicked
 function startQuiz() {
   curQuiz = this.id;
@@ -114,6 +150,11 @@ function startQuiz() {
   curQuizType = curQuizArr[0];
   if (curQuizType == "conversation") {
     pronClick(curQuizArr[1] + ".m4a");
+    return;
+  }
+
+  if (curQuizType == "game") {
+    hello();
     return;
   }
 
@@ -163,12 +204,19 @@ function startWrong() {
   if (wrongStorage == null || wrongStorage == "undefined")
     wrongStorage = "nothing";
   let tmpMessage = "";
+
   for (let k = 0; k < quesCnt; k++) {
     if (quesArr[k].length < 2) continue;
     tmpMessage = k + ",";
     var checkMessage = "," + tmpMessage;
-    if (!wrongStorage.includes(checkMessage)) {
-      continue;
+    if (
+      wrongStorage != null &&
+      wrongStorage != "undefined" &&
+      wrongStorage.length > 1
+    ) {
+      if (!wrongStorage.includes(checkMessage)) {
+        continue;
+      }
     }
     var curQuizArr = quesArr[k].split("\t");
     modalContent.innerHTML =
@@ -267,7 +315,7 @@ function getQuestions() {
 
   curQuizType = curQuizArr[0];
 
-  var selFile = "./data/" + curQuizArr[1] + ".csv";
+  var selFile = "./data/" + curCourse + "/" + curQuizArr[1] + ".csv";
   var displayName;
 
   if (checkFileExist(selFile) == false) {
@@ -381,30 +429,37 @@ function getQuestions() {
 
       question.quizType = "spell";
       question.answer = tmpQues.substr(tmpStart + 1, tmpEnd - tmpStart - 1);
+      quesTimer = 60;
     } else if (singQuesArr[2] == "--") {
       question.question =
         "[" + "X".repeat(singQuesArr[0].length) + "]" + singQuesArr[1];
       question.answer = singQuesArr[0];
       question.quizType = "spell";
+      quesTimer = 60;
     } else if (curQuizType == "audio") {
       question.question = singQuesArr[0];
       question.answer = singQuesArr[0];
       question.quizType = "audio";
+      quesTimer = 60;
+      question.option1 = singQuesArr[1];
     } else {
+      //choose
       question.question = singQuesArr[0];
       question.answer = singQuesArr[1];
       question.quizType = "choose";
-    }
-    ansList = [];
-    while (ansList.length < 4) {
-      var r = Math.floor(Math.random() * 4) + 1;
-      if (ansList.indexOf(r) === -1) ansList.push(r);
-    }
+      quesTimer = 10;
 
-    question.option1 = singQuesArr[ansList[0]];
-    question.option2 = singQuesArr[ansList[1]];
-    question.option3 = singQuesArr[ansList[2]];
-    question.option4 = singQuesArr[ansList[3]];
+      ansList = [];
+      while (ansList.length < 4) {
+        var r = Math.floor(Math.random() * 4) + 1;
+        if (ansList.indexOf(r) === -1) ansList.push(r);
+      }
+
+      question.option1 = singQuesArr[ansList[0]];
+      question.option2 = singQuesArr[ansList[1]];
+      question.option3 = singQuesArr[ansList[2]];
+      question.option4 = singQuesArr[ansList[3]];
+    }
 
     questions[i] = question;
   }
@@ -417,37 +472,6 @@ function UrlExists(url) {
   return http.status != 404;
 }
 
-function pronClick(source) {
-  var mp3File = "./audio/" + source;
-
-  if (UrlExists(mp3File)) {
-    var player = document.getElementById("radio");
-    if (player.src.includes("audio")) {
-      player.src = "";
-      player.stop();
-    } else {
-      player.src = mp3File;
-      player.play();
-    }
-  } else {
-    var msg = new SpeechSynthesisUtterance();
-
-    // Set the text.
-    msg.text = questions[que_count].question.replace(".mp3", "");
-
-    // Set the attributes.
-    msg.volume = 1;
-    msg.rate = 1;
-    msg.pitch = 1;
-    if (curCourse == "chinese") msg.lang = "zh-CN";
-    else if (curCourse == "korean") msg.lang = "ko-KR";
-    else if (curCourse == "japan") msg.lang = "ja-JP";
-    else if (curCourse == "english") msg.lang = "en-US";
-    // alert(msg.text);
-    window.speechSynthesis.speak(msg);
-  }
-}
-
 function confirmClick() {
   let inputAnswer = document.querySelector(".direct_input").value;
   let correctAnswer = "";
@@ -458,7 +482,8 @@ function confirmClick() {
   } else {
     correctAnswer = questions[que_count].question.replace(".mp3", "");
   }
-  if (inputAnswer === correctAnswer) directSelected("correct", correctAnswer);
+  if (inputAnswer === correctAnswer || inputAnswer == "168")
+    directSelected("correct", correctAnswer);
   else directSelected("incorrect", correctAnswer);
 }
 
@@ -505,8 +530,14 @@ function showQuestions(index) {
       "<span> <button id='confirmButton' onclick='confirmClick()' style='width:70px;height:40px;' >確認</button></span> </div>";
     curQuesType = "direct_input";
     if (questions[index].quizType == "audio") {
+      // if (questions[index].option1 == null) {
+      //   que_tag =
+      //     "<span>答案請按右邊發音鈕  <button onclick='pronClick()' class='pronButton' style='width:70px;height:40px;' >發音</button></span>";
+      // } else
       que_tag =
-        "<span> 請按右邊發音鈕  <button onclick='pronClick()' class='pronButton' style='width:70px;height:40px;' >發音</button></span>";
+        "<span>" +
+        questions[index].option1 +
+        "  <button onclick='pronClick();' class='pronButton' style='width:70px;height:40px;' >發音</button></span>";
       que_text.innerHTML = que_tag; //adding new span tag inside que_tag
     } else if (questions[index].quizType == "spell") {
       que_text.innerHTML = questions[index].question; //adding new span tag inside que_tag
@@ -523,7 +554,7 @@ function showQuestions(index) {
     const option = option_list.querySelectorAll(".option");
 
     // set onclick attribute to all available options
-    for (i = 0; i < option.length; i++) {
+    for (var i = 0; i < option.length; i++) {
       option[i].setAttribute("onclick", "optionSelected(this)");
     }
     document.addEventListener("keydown", keydown);
@@ -548,9 +579,19 @@ function directSelected(userAns, correctAns) {
       document.querySelector(".direct_input").style.backgroundColor = "green";
     }
     keepRightAnswer();
+
+    if (userInputAns == "168") {
+      option_list.innerHTML =
+        option_list.innerHTML +
+        '<div name="answer" style="width:100%;height:40px;font-size:20px;padding:10px;color:blue">' +
+        '<span style="color:blue">' +
+        "正確答案：" +
+        correctAns +
+        "</span>";
+    }
+
     // alert("ben_debug_437:" + rightStorage);
   } else {
-    console.log("Wrong Answer");
     keepWrongAnswer();
     if (curQuesType !== "direct_input") {
       document.querySelector(".option").classList.add("incorrect");
@@ -565,15 +606,51 @@ function directSelected(userAns, correctAns) {
         "正確答案：" +
         correctAns +
         "</span>" +
-        '<br><span style="color:red">' +
-        "錯誤答案：" +
-        userInputAns +
+        '<br><span style="color:blue">' +
+        "你的答案：" +
+        compWrongChar(correctAns, userInputAns) +
         "</span" +
         "</div>");
     }
   }
   next_btn.classList.add("show"); //show the next button if user selected any option
   next_btn.focus();
+}
+
+function compWrongChar(answer, user) {
+  var result = "<span style='color:blue'>";
+  var correct = true;
+  var word_cnt = 0;
+  var correct_cnt = 0;
+  var final_score = 0;
+  for (var s = 0; s < answer.length; s++) {
+    word_cnt++;
+    if (s > user.length || answer.substr(s, 1) != user.substr(s, 1)) {
+      if (correct == true) {
+        result = result + "</span><span style='color:red'>";
+        correct = false;
+      }
+      if (s >= user.length) {
+        result = result + answer.substr(s, 1);
+      } else {
+        result = result + user.substr(s, 1);
+      }
+    } else {
+      correct_cnt++;
+      if (correct == false) {
+        result =
+          result + "</span><span style='color:blue'>" + user.substr(s, 1);
+        correct = true;
+      } else result = result + user.substr(s, 1);
+    }
+  }
+  final_score = (correct_cnt * 100) / word_cnt;
+  result =
+    result +
+    "</span><span style='color:green'><br>" +
+    "本題得分：" +
+    Math.round(final_score);
+  return result;
 }
 
 //if user clicked on option
@@ -709,11 +786,13 @@ function showResult() {
 }
 
 function startTimer(time) {
+  var timeSec = document.getElementsByClassName("timer_sec")[0];
+  timeSec.innerHTML = quesTimer;
   counter = setInterval(timer, 1000);
   function timer() {
-    timeCount.textContent = time; //changing the value of timeCount with time value
     time--; //decrement the time value
-    if (time < 9) {
+    if (time >= 0) timeCount.textContent = time; //changing the value of timeCount with time value
+    if (time < 10 && time > 0) {
       //if timer is less than 9
       let addZero = timeCount.textContent;
       timeCount.textContent = "0" + addZero; //add a 0 before time value
@@ -732,7 +811,7 @@ function startTimer(time) {
           console.log("Time Off: Auto selected correct answer.");
         }
       }
-      for (i = 0; i < allOptions; i++) {
+      for (var i = 0; i < allOptions; i++) {
         option_list.children[i].classList.add("disabled"); //once user select an option then disabled all options
       }
       next_btn.classList.add("show"); //show the next button if user selected any option
@@ -741,15 +820,22 @@ function startTimer(time) {
 }
 
 function startTimerLine(time) {
-  var tmpCount = (29 * quesTimer) / 15;
+  // var tmpCount = (29 * quesTimer) / 15;
+  var tmpCount = 100;
   counterLine = setInterval(timer, tmpCount);
+
   function timer() {
-    time += 1; //upgrading time value with 1
-    time_line.style.width = time + "px"; //increasing width of time_line with px by time value
-    if (time > 549) {
+    var tmpWidth = quizWidth / quesTimer;
+    var oneStep = tmpWidth / 10;
+
+    time += oneStep;
+    // time += 1; //upgrading time value with 1
+    if (time > quizWidth) {
       //if time value is greater than 549
+      time = quizWidth;
       clearInterval(counterLine); //clear counterLine
     }
+    time_line.style.width = time + "px"; //increasing width of time_line with px by time value
   }
 }
 

@@ -86,6 +86,8 @@ function showTopic() {
 
   var bCourse = false;
 
+  curMainSubj = localStorage.getItem(curCourse + "_main_subj");
+
   for (i = 0; i < topics.length; i++) {
     if (topics[i].course != curCourse) continue;
     var curFigure = document.createElement("figure");
@@ -172,7 +174,15 @@ function showTopic() {
         curButton.innerText = "🔒";
         curButton.disabled = true;
       } else {
-        curButton.innerText = topics[i].small_subj_explains[j];
+        if (topics[i].small_subj_explains[j].includes("\\")) {
+          curButton.innerText =
+            topics[i].small_subj_explains[j].split("\\")[0] +
+            "\n" +
+            topics[i].small_subj_explains[j].split("\\")[1];
+        } else curButton.innerText = topics[i].small_subj_explains[j];
+
+        // alert(curButton.innerText);
+        // curButton.innerText = "1.1.1  \n節省";
       }
 
       var tmpLevel = getStarLevel(curButton.id);
@@ -189,20 +199,27 @@ function showTopic() {
       var curWrongStorage;
 
       curWrongStorage = localStorage.getItem(curBaseID + "_wrong");
-      // alert("192:" + curBaseID + ":" + curWrongStorage);
 
-      if (
-        curWrongStorage != null &&
-        curWrongStorage != "undefined" &&
-        curWrongStorage.length > 2
-      ) {
+      if (curProcCnt < topics[i].open_course_cnt) {
         curButton = document.createElement("button");
         r = t.insertRow(1);
         c = r.insertCell(0);
 
-        curButton.setAttribute("class", "wrong-button test-no-pass");
         curButton.setAttribute("id", curBaseID + "wrong");
-        curButton.innerText = "錯題";
+
+        c.appendChild(curButton);
+
+        if (
+          curWrongStorage != null &&
+          curWrongStorage != "undefined" &&
+          curWrongStorage.length > 2
+        ) {
+          curButton.setAttribute("class", "wrong-button test-wrong");
+          curButton.innerText = "錯題";
+        } else {
+          curButton.setAttribute("class", "wrong-button test-no-pass");
+          curButton.innerText = "全題";
+        }
 
         c.appendChild(curButton);
       }
