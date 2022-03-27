@@ -200,7 +200,10 @@ function showTopic() {
 
       curWrongStorage = localStorage.getItem(curBaseID + "_wrong");
 
-      if (curProcCnt < topics[i].open_course_cnt) {
+      if (
+        curProcCnt < topics[i].open_course_cnt &&
+        topics[i].main_subj != "game"
+      ) {
         curButton = document.createElement("button");
         r = t.insertRow(1);
         c = r.insertCell(0);
@@ -233,15 +236,20 @@ function showTopic() {
 
       var k;
 
-      tmpMessage = "<span style='color:blue;'>";
-      for (k = 0; k < tmpLevel; k++) {
-        tmpMessage += "★";
+      if (
+        curProcCnt < topics[i].open_course_cnt &&
+        topics[i].main_subj != "game"
+      ) {
+        tmpMessage = "<span style='color:blue;'>";
+        for (k = 0; k < tmpLevel; k++) {
+          tmpMessage += "★";
+        }
+        for (; k < 3; k++) {
+          tmpMessage += "✩";
+        }
+        tmpMessage += "</span>";
+        c.innerHTML = tmpMessage;
       }
-      for (; k < 3; k++) {
-        tmpMessage += "✩";
-      }
-      tmpMessage += "</span>";
-      c.innerHTML = tmpMessage;
 
       // curDetailRight.appendChild(curButton);
       curDetailRight.appendChild(t);

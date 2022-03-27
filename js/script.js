@@ -181,7 +181,7 @@ function startWrong() {
   modal.style.display = "block";
 
   var curQuizArr = curQuiz.split("-");
-  var selFile = "./data/" + curQuizArr[1] + ".csv";
+  var selFile = "./data/" + curCourse + "/" + curQuizArr[1] + ".csv";
 
   if (checkFileExist(selFile) == false) {
     alert("Quiz file [" + selFile + "] does not exist.");
