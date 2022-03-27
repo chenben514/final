@@ -59,6 +59,15 @@ function closeWrong() {
 
 function pressCard() {
   if (this.id == "card" + nowOrder) {
+    document.getElementById(this.id).classList.add("card_ok"); //show quiz box;
+  } else {
+    document.getElementById(this.id).classList.add("card_ng"); //show quiz box;
+  }
+}
+
+function pressCardup() {
+  if (this.id == "card" + nowOrder) {
+    document.getElementById(this.id).classList.remove("card_ok"); //show quiz box;
     nowOrder++;
     var target = document.getElementById("nowOrder");
     target.innerText = "請按右邊數字 " + nowOrder;
@@ -66,6 +75,8 @@ function pressCard() {
       clearInterval(counter); //clear counter
       target.innerText = "你花了 " + quesTimer + " 秒完成";
     }
+  } else {
+    document.getElementById(this.id).classList.remove("card_ng"); //show quiz box;
   }
 }
 
@@ -119,7 +130,8 @@ function digitFocus() {
   //0.1. Set Subject
   var card_links = document.querySelectorAll(".card_container");
   for (let i = 0; i < card_links.length; i++) {
-    card_links[i].addEventListener("click", pressCard);
+    card_links[i].addEventListener("mousedown", pressCard);
+    card_links[i].addEventListener("mouseup", pressCardup);
   }
   startTimer();
 }
