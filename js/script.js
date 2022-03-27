@@ -19,6 +19,9 @@ const quizWidth = document.querySelector("section").offsetWidth;
 let quesTimer = 15;
 var startSecond;
 var nowSecond;
+var startMilisecond;
+var nowMilisecond;
+var miliWidth;
 let curQuiz = "";
 let ansQuesCnt = 0;
 let quizType = "";
@@ -799,13 +802,13 @@ function startTimer() {
   counter = setInterval(timer, 1000);
 
   var d = new Date();
-  startSecond = Math.floor(d.getTime() / 1000);
+  startSecond = d.getTime();
 
   function timer() {
     var time;
     var d = new Date();
-    nowSecond = Math.floor(d.getTime() / 1000);
-    time = quesTimer - (nowSecond - startSecond);
+    nowSecond = d.getTime();
+    time = quesTimer - Math.floor((nowSecond - startSecond) / 1000);
     if (time >= 0) timeCount.textContent = time; //changing the value of timeCount with time value
     if (time < 10 && time > 0) {
       //if timer is less than 9
@@ -835,21 +838,27 @@ function startTimer() {
 }
 
 function startTimerLine() {
-  var time;
   var tmpCount = 100;
   counterLine = setInterval(timer, tmpCount);
+  var d = new Date();
+  startMilisecond = d.getTime();
+  miliWidth = quizWidth / quesTimer / 1000;
 
   function timer() {
-    var tmpWidth = quizWidth / quesTimer;
-    var oneStep = (nowSecond - startSecond) * tmpWidth;
+    var d = new Date();
+    nowMilisecond = d.getTime();
 
-    time = oneStep;
+    var time;
+    var oneStep = (nowMilisecond - startMilisecond) * miliWidth;
+
+    time = Math.floor(oneStep);
     // time += 1; //upgrading time value with 1
     if (time > quizWidth) {
       //if time value is greater than 549
       time = quizWidth;
       clearInterval(counterLine); //clear counterLine
     }
+
     time_line.style.width = time + "px"; //increasing width of time_line with px by time value
   }
 }
