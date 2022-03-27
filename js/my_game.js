@@ -11,6 +11,7 @@ var nowOrder = 1;
 var nowMax = 0;
 var quesTimer = 0;
 var counter;
+var curLevelIdx = 0;
 
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -41,7 +42,7 @@ function hello() {
     '<span class="timer_sec label_text" id="my_game_sec">00</span>' +
     '<span class="label_text" >秒</span>' +
     "<button style='float:right' class='game_button' onclick='closeWrong()'>離開遊戲</button>" +
-    "</br><label id='nowOrder'> 0 </label>";
+    "</br><label id='nowOrder'>  </label>";
 
   // gameContent.innerHTML =
   //   "<h1>hello world</h1><button class='boardGame'>離開遊戲</button>";
@@ -70,6 +71,7 @@ function digitFocus() {
   nowOrder = 1;
   var e = document.getElementById("digits");
   var value = e.options[e.selectedIndex].value;
+  curLevelIdx = e.selectedIndex;
   var text = e.options[e.selectedIndex].text;
   var game_table = document.getElementById("game_table");
   var target = document.getElementById("nowOrder");
@@ -117,6 +119,10 @@ function digitFocus() {
 }
 
 function startTimer() {
+  var e = document.getElementById("digits");
+
+  e.selectedIndex = curLevelIdx;
+
   counter = setInterval(timer, 1000);
   function timer() {
     var timeSec = document.getElementById("my_game_sec");
