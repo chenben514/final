@@ -11,6 +11,14 @@
   text-align: center;
 }
 
+.card_ok {
+  background-color: blue;
+}
+
+.card_ng {
+  background-color: red;
+}
+
 .card {
   background-color: #68c39f;
   width: 100%;
