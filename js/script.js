@@ -17,6 +17,8 @@ const content = document.querySelector(".content");
 const sideBar = document.querySelector(".sidebar");
 const quizWidth = document.querySelector("section").offsetWidth;
 let quesTimer = 15;
+var startSecond;
+var nowSecond;
 let curQuiz = "";
 let ansQuesCnt = 0;
 let quizType = "";
@@ -171,8 +173,8 @@ function startQuiz() {
   quiz_box.classList.add("activeQuiz"); //show quiz box
   showQuestions(0); //calling showQestions function
   queCounter(1); //passing 1 parameter to queCounter
-  startTimer(quesTimer); //calling startTimer function
-  startTimerLine(0); //calling startTimerLine function
+  startTimer(); //calling startTimer function
+  startTimerLine(); //calling startTimerLine function
 }
 
 function startWrong() {
@@ -247,13 +249,11 @@ function closeWrong() {
   content.classList.remove("slight_opacity");
 }
 
-let timeValue = quesTimer;
 let que_count = 0;
 let que_numb = 1;
 let userScore = 0;
 let counter;
 let counterLine;
-let widthValue = 0;
 let nowCursorFocus = 0;
 let curQuesType = "";
 
@@ -287,8 +287,8 @@ next_btn.onclick = () => {
     queCounter(que_numb); //passing que_numb value to queCounter
     clearInterval(counter); //clear counter
     clearInterval(counterLine); //clear counterLine
-    startTimer(timeValue); //calling startTimer function
-    startTimerLine(widthValue); //calling startTimerLine function
+    startTimer(); //calling startTimer function
+    startTimerLine(); //calling startTimerLine function
     timeText.textContent = "還剩"; //change the timeText to Time Left
     next_btn.classList.remove("show"); //hide the next button
   } else {
@@ -793,12 +793,19 @@ function showResult() {
   }
 }
 
-function startTimer(time) {
+function startTimer() {
   var timeSec = document.getElementsByClassName("timer_sec")[0];
   timeSec.innerHTML = quesTimer;
   counter = setInterval(timer, 1000);
+
+  var d = new Date();
+  startSecond = Math.floor(d.getTime() / 1000);
+
   function timer() {
-    time--; //decrement the time value
+    var time;
+    var d = new Date();
+    nowSecond = Math.floor(d.getTime() / 1000);
+    time = quesTimer - (nowSecond - startSecond);
     if (time >= 0) timeCount.textContent = time; //changing the value of timeCount with time value
     if (time < 10 && time > 0) {
       //if timer is less than 9
@@ -827,16 +834,16 @@ function startTimer(time) {
   }
 }
 
-function startTimerLine(time) {
-  // var tmpCount = (29 * quesTimer) / 15;
+function startTimerLine() {
+  var time;
   var tmpCount = 100;
   counterLine = setInterval(timer, tmpCount);
 
   function timer() {
     var tmpWidth = quizWidth / quesTimer;
-    var oneStep = tmpWidth / 10;
+    var oneStep = (nowSecond - startSecond) * tmpWidth;
 
-    time += oneStep;
+    time = oneStep;
     // time += 1; //upgrading time value with 1
     if (time > quizWidth) {
       //if time value is greater than 549
