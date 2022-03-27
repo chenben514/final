@@ -115,6 +115,7 @@ function pronClick(source) {
 
   if (UrlExists(mp3File)) {
     var player = document.getElementById("radio");
+    player.hidden = false;
     if (player.src.includes("audio")) {
       player.src = "";
       player.stop();
@@ -144,13 +145,19 @@ function pronClick(source) {
 // if startQuiz button clicked
 function startQuiz() {
   curQuiz = this.id;
-
-  //0.直接聽錄音
   var curQuizArr = curQuiz.split("-");
   curQuizType = curQuizArr[0];
+  //0.直接聽錄音
+
   if (curQuizType == "conversation") {
+    var player = document.getElementById("radio");
+    player.hidden = false;
+
     pronClick(curQuizArr[1] + ".m4a");
     return;
+  } else {
+    var player = document.getElementById("radio");
+    player.hidden = true;
   }
 
   if (curQuizType == "game") {

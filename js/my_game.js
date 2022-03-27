@@ -28,7 +28,7 @@ function hello() {
   game_modal.style.display = "block";
 
   game.innerHTML =
-    '<h3>選擇等級</h3><select name="digits" id="digits" style="margin:10px;padding:10px;width:100px;height:40px;" >' +
+    '<h6>選擇等級</h6><select name="digits" id="digits" class="combo_box" >' +
     '<optgroup label="Swedish Cars">' +
     '<option value="3">3</option>' +
     '<option value="5" selected>5</option>' +
@@ -37,9 +37,9 @@ function hello() {
     "</optgroup>" +
     "</select>" +
     "<button class='game_button' onclick='digitFocus()'>開始遊戲</button>" +
-    '<span class="time_left_txt">己花</span>' +
-    '<span class="timer_sec" id="my_game_sec">00</span>' +
-    "<span >秒</span>" +
+    '<span class="label_text">己花</span>' +
+    '<span class="timer_sec label_text" id="my_game_sec">00</span>' +
+    '<span class="label_text" >秒</span>' +
     "<button style='float:right' class='game_button' onclick='closeWrong()'>離開遊戲</button>" +
     "</br><label id='nowOrder'> 0 </label>";
 

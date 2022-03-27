@@ -204,27 +204,28 @@ function showTopic() {
         curProcCnt < topics[i].open_course_cnt &&
         topics[i].main_subj != "game"
       ) {
-        curButton = document.createElement("button");
-        r = t.insertRow(1);
-        c = r.insertCell(0);
-
-        curButton.setAttribute("id", curBaseID + "wrong");
-
-        c.appendChild(curButton);
-
         if (
           curWrongStorage != null &&
           curWrongStorage != "undefined" &&
           curWrongStorage.length > 2
         ) {
+          curButton = document.createElement("button");
+          r = t.insertRow(1);
+          c = r.insertCell(0);
+
+          curButton.setAttribute("id", curBaseID + "wrong");
+
+          c.appendChild(curButton);
+
           curButton.setAttribute("class", "wrong-button test-wrong");
           curButton.innerText = "錯題";
-        } else {
-          curButton.setAttribute("class", "wrong-button test-no-pass");
-          curButton.innerText = "全題";
+          c.appendChild(curButton);
         }
 
-        c.appendChild(curButton);
+        // else {
+        //   curButton.setAttribute("class", "wrong-button test-no-pass");
+        //   curButton.innerText = "全題";
+        // }
       }
 
       //3. star
