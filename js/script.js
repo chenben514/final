@@ -686,7 +686,7 @@ function optionSelected(answer) {
     answer.insertAdjacentHTML("beforeend", crossIconTag); //adding cross icon to correct selected option
     console.log("Wrong Answer");
 
-    for (i = 0; i < allOptions; i++) {
+    for (var i = 0; i < allOptions; i++) {
       if (
         option_list.children[i].textContent.substr(
           2,
