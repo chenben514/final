@@ -55,9 +55,9 @@
   box-sizing: border-box;
 }
 
-table {
+/* table {
   margin: 0px auto;
-}
+} */
 
 .timer {
   display: block;
@@ -93,6 +93,21 @@ table {
   position: absolute;
 }
 
+.combo_box {
+  margin: 10px;
+  padding: 10px;
+  width: 100px;
+  height: 40px;
+}
+@media (max-width: 600px) {
+  .combo_box {
+    margin: 2px;
+    padding: 2px;
+    width: 40px;
+    height: 30px;
+  }
+}
+
 .game_button {
   margin: 10px;
   padding: 10px;
@@ -101,9 +116,30 @@ table {
   font-size: 1.7rem;
   color: blue;
 }
+@media (max-width: 600px) {
+  .game_button {
+    margin: 2px;
+    padding: 2px;
+    width: 60px;
+    height: 20px;
+    font-size: 0.7rem;
+    color: blue;
+  }
+}
+
+.label_text {
+  font-size: 1.7rem;
+  color: blue;
+}
+@media (max-width: 600px) {
+  .label_text {
+    font-size: 0.7rem;
+    color: blue;
+  }
+}
 
 .timer_sec {
-  font-size: 18px;
+  font-size: 1.7rem;
   font-weight: 500;
   height: 30px;
   width: 60px;
@@ -115,4 +151,11 @@ table {
   border: 1px solid #343a40;
   user-select: none;
   padding: 2px;
+}
+
+@media (max-width: 600px) {
+  .timer_sec {
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
 }
