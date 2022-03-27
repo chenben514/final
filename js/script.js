@@ -1,6 +1,7 @@
 import hello from "./my_game.js";
 window.pronClick = pronClick;
 window.confirmClick = confirmClick;
+window.optionSelected = optionSelected;
 //selecting all required elements
 const maxQuesCnt = 500;
 const start_btn = document.querySelector(".test-button");
