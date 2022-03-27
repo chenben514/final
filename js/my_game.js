@@ -88,7 +88,7 @@ function digitFocus() {
   quesTimer = 0;
 
   var d = new Date();
-  startSecond = d.getSeconds();
+  startSecond = Math.floor(d.getTime() / 1000);
 
   digitPos = [];
   for (var i = 1; i <= text * text; i++) {
@@ -134,7 +134,7 @@ function startTimer() {
     var timeSec = document.getElementById("my_game_sec");
 
     var d = new Date();
-    nowSecond = d.getSeconds();
+    nowSecond = Math.floor(d.getTime() / 1000);
 
     quesTimer = nowSecond - startSecond;
 
