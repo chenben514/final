@@ -12,6 +12,8 @@ var nowMax = 0;
 var quesTimer = 0;
 var counter;
 var curLevelIdx = 0;
+var startSecond;
+var nowSecond;
 
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -84,6 +86,10 @@ function digitFocus() {
   if (game_table != null) game_table.remove();
 
   quesTimer = 0;
+
+  var d = new Date();
+  startSecond = d.getSeconds();
+
   digitPos = [];
   for (var i = 1; i <= text * text; i++) {
     digitPos.push(i);
@@ -126,8 +132,13 @@ function startTimer() {
   counter = setInterval(timer, 1000);
   function timer() {
     var timeSec = document.getElementById("my_game_sec");
-    timeSec.innerText = quesTimer;
-    quesTimer++;
+
+    var d = new Date();
+    nowSecond = d.getSeconds();
+
+    quesTimer = nowSecond - startSecond;
+    alert(quesTimer);
+
     if (quesTimer < 10 && quesTimer > 0) {
       timeSec.innerText = "0" + quesTimer;
     } else timeSec.innerText = quesTimer;
