@@ -137,7 +137,6 @@ function startTimer() {
     nowSecond = d.getSeconds();
 
     quesTimer = nowSecond - startSecond;
-    alert(quesTimer);
 
     if (quesTimer < 10 && quesTimer > 0) {
       timeSec.innerText = "0" + quesTimer;
