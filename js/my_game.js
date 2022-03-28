@@ -132,6 +132,8 @@ function digitFocus() {
   for (let i = 0; i < card_links.length; i++) {
     card_links[i].addEventListener("mousedown", pressCard);
     card_links[i].addEventListener("mouseup", pressCardup);
+    card_links[i].addEventListener("touchstart", pressCard);
+    card_links[i].addEventListener("touchend", pressCardup);
   }
   startTimer();
 }
