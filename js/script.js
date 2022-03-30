@@ -484,16 +484,18 @@ function UrlExists(url) {
 }
 
 function confirmClick() {
-  let inputAnswer = document.querySelector(".direct_input").value;
+  let inputAnswer = document.querySelector(".direct_input").value.toLowerCase();
   let correctAnswer = "";
   userInputAns = inputAnswer;
   document.querySelector("#confirmButton").disabled = "true";
   if (curQuesType === "direct_input") {
-    correctAnswer = questions[que_count].answer;
+    correctAnswer = questions[que_count].answer.toLowerCase();
   } else {
-    correctAnswer = questions[que_count].question.replace(".mp3", "");
+    correctAnswer = questions[que_count].question
+      .toLowerCase()
+      .replace(".mp3", "");
   }
-  if (inputAnswer === correctAnswer || inputAnswer == "111")
+  if (inputAnswer === correctAnswer || inputAnswer == "qqq")
     directSelected("correct", correctAnswer);
   else directSelected("incorrect", correctAnswer);
 }
