@@ -351,25 +351,25 @@ function getQuestions() {
   let k = 0;
 
   var rightStorage = localStorage.getItem(curQuiz + "_right");
-  var wrongStorage = localStorage.getItem(curQuiz + "_wrong");
+  // var wrongStorage = localStorage.getItem(curQuiz + "_wrong");
   if (rightStorage == null || rightStorage == "undefined")
     rightStorage = "nothing";
-  if (wrongStorage == null || wrongStorage == "undefined")
-    wrongStorage = "nothing";
+  // if (wrongStorage == null || wrongStorage == "undefined")
+  //   wrongStorage = "nothing";
   let tmpMessage = "";
   for (let k = 0; k < quesCnt; k++) {
     if (quesArr[k].length < 2) continue;
     tmpMessage = k + ",";
     var checkMessage = "," + tmpMessage;
     if (rightStorage.includes(checkMessage)) {
-      if (!wrongStorage.includes(checkMessage)) {
-        correctCnt++;
-        continue;
-      }
+      // if (!wrongStorage.includes(checkMessage)) {
+      correctCnt++;
+      continue;
+      // }
     }
     tmpArr.push(tmpMessage + quesArr[k]);
   }
-  localStorage.setItem(curQuiz + "_wrong", "");
+  // localStorage.setItem(curQuiz + "_wrong", "");
   quesArr = tmpArr;
   quesCnt = quesArr.length;
   if (quesCnt == 0) {
