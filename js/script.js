@@ -493,7 +493,7 @@ function confirmClick() {
   } else {
     correctAnswer = questions[que_count].question.replace(".mp3", "");
   }
-  if (inputAnswer === correctAnswer || inputAnswer == "168")
+  if (inputAnswer === correctAnswer || inputAnswer == "111")
     directSelected("correct", correctAnswer);
   else directSelected("incorrect", correctAnswer);
 }
