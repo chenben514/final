@@ -122,13 +122,13 @@ function pronClick(source) {
   if (UrlExists(mp3File)) {
     var player = document.getElementById("radio");
     player.hidden = false;
-    if (player.src.includes("audio")) {
-      player.src = "";
-      player.stop();
-    } else {
-      player.src = mp3File;
-      player.play();
-    }
+    // if (player.src.includes("audio")) {
+    //   player.src = "";
+    //   player.stop();
+    // } else {
+    player.src = mp3File;
+    player.play();
+    // }
   } else {
     var msg = new SpeechSynthesisUtterance();
 
