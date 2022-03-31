@@ -2,6 +2,9 @@ window.closeWrong = closeWrong;
 window.digitFocus = digitFocus;
 window.pressCard = pressCard;
 
+let multiple;
+let value;
+
 const gameHeight = document.querySelector("body").offsetHeight;
 
 const content = document.querySelector(".content");
@@ -78,7 +81,8 @@ function pressCardup() {
     document.getElementById(this.id).classList.remove("card_ok"); //show quiz box;
     nowOrder++;
     var target = document.getElementById("nowOrder");
-    target.innerText = "請按右邊數字 " + nowOrder;
+    if (multiple > 1) target.innerText = "請按右邊數字 " + nowOrder * multiple;
+    else target.innerText = "請按右邊數字 " + nowOrder;
     if (nowOrder == nowMax + 1) {
       clearInterval(counter); //clear counter
       target.innerText = "你花了 " + quesTimer + " 秒完成";
@@ -90,9 +94,9 @@ function pressCardup() {
 
 function digitFocus() {
   nowOrder = 1;
-  var multiple;
+  multiple;
   var e = document.getElementById("digits");
-  var value = e.options[e.selectedIndex].value;
+  value = e.options[e.selectedIndex].value;
   curLevelIdx = e.selectedIndex;
   var text = e.options[e.selectedIndex].text;
   var game_table = document.getElementById("game_table");
