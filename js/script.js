@@ -150,6 +150,18 @@ function pronClick(source) {
 
 // if startQuiz button clicked
 function startQuiz() {
+  //0.1 disable all test buttons
+  let small_test_links = document.querySelectorAll(".test-button");
+  for (let i = 0; i < small_test_links.length; i++) {
+    small_test_links[i].disabled = true;
+  }
+
+  let small_wrong_links = document.querySelectorAll(".wrong-button");
+  for (let i = 0; i < small_wrong_links.length; i++) {
+    small_wrong_links[i].disabled = true;
+  }
+
+  //0.2. disable all test buttons
   curQuiz = this.id;
   var curQuizArr = curQuiz.split("-");
   curQuizType = curQuizArr[0];
