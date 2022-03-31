@@ -37,6 +37,14 @@ function hello() {
     '<option value="5" selected>5</option>' +
     '<option value="7">7</option>' +
     '<option value="9">9</option>' +
+    '<option value="29">2的乘法</option>' +
+    '<option value="39">3的乘法</option>' +
+    '<option value="49">4的乘法</option>' +
+    '<option value="59">5的乘法</option>' +
+    '<option value="69">6的乘法</option>' +
+    '<option value="79">7的乘法</option>' +
+    '<option value="89">8的乘法</option>' +
+    '<option value="99">9的乘法</option>' +
     "</optgroup>" +
     "</select>" +
     "<button class='game_button' onclick='digitFocus()'>開始遊戲</button>" +
@@ -82,13 +90,22 @@ function pressCardup() {
 
 function digitFocus() {
   nowOrder = 1;
+  var multiple;
   var e = document.getElementById("digits");
   var value = e.options[e.selectedIndex].value;
   curLevelIdx = e.selectedIndex;
   var text = e.options[e.selectedIndex].text;
   var game_table = document.getElementById("game_table");
   var target = document.getElementById("nowOrder");
-  target.innerText = target.innerText = "請從數字 1 按到數字 25";
+  if (value < 10) {
+    target.innerText = target.innerText = "請從數字 1 按到數字" + value * value;
+    multiple = 1;
+  } else {
+    multiple = Math.floor(value / 10);
+    text = 3;
+    target.innerText = target.innerText =
+      "請從數字" + multiple + "按到數字" + multiple * multiple;
+  }
 
   var tmpResult;
   tmpResult = "<table id='game_table' class='table-top'>";
@@ -119,7 +136,7 @@ function digitFocus() {
       tmpResult += digitPos[i * text + j];
       tmpResult += "'>";
 
-      tmpResult += digitPos[i * text + j];
+      tmpResult += digitPos[i * text + j] * multiple;
       tmpResult += "</td>";
     }
     tmpResult += "</tr>";
