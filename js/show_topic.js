@@ -12,6 +12,7 @@ class Topic {
   quiz_type;
   small_subjs = [];
   small_subj_explains = [];
+  small_subj_html = [];
 }
 var topics = [];
 
@@ -63,6 +64,16 @@ function getTopic() {
     for (j = 6; j < singTopicArr.length; j += 2) {
       topic.small_subjs.push(singTopicArr[j]);
       topic.small_subj_explains.push(singTopicArr[j + 1]);
+      if (j + 2 < singTopicArr.length) {
+        if (singTopicArr[j + 2].startsWith("http")) {
+          topic.small_subj_html.push(singTopicArr[j + 2]);
+          j += 1;
+        } else {
+          topic.small_subj_html.push("NA");
+        }
+      } else {
+        topic.small_subj_html.push("NA");
+      }
     }
     topics[i] = topic;
   }
@@ -233,7 +244,7 @@ function showTopic() {
       c = r.insertCell(0);
       c.setAttribute("style", "text-align:center");
 
-      var tmpMessage;
+      var tmpMessage = "";
 
       var k;
 
@@ -241,7 +252,20 @@ function showTopic() {
         curProcCnt < topics[i].open_course_cnt &&
         topics[i].main_subj != "game"
       ) {
-        tmpMessage = "<span style='color:blue;'>";
+        var curClassID = curBaseID + "_class";
+        if (topics[i].small_subj_html[j].startsWith("http")) {
+          tmpMessage =
+            '<button  onclick="location.href =' +
+            "'" +
+            topics[i].small_subj_html[j] +
+            "'" +
+            '"' +
+            'class="class-button id ="" ' +
+            curClassID +
+            ">課程 </button><span style='color:blue;'>";
+        }
+
+        tmpMessage += "<span style='color:blue;'>";
         for (k = 0; k < tmpLevel; k++) {
           tmpMessage += "★";
         }

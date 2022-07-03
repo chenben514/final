@@ -103,6 +103,11 @@ function setMainSubject() {
   for (let i = 0; i < small_wrong_links.length; i++) {
     small_wrong_links[i].addEventListener("click", startWrong);
   }
+
+  // let small_class_links = document.querySelectorAll(".class-button");
+  // for (let i = 0; i < small_class_links.length; i++) {
+  //   small_class_links[i].addEventListener("click", startClass);
+  // }
 }
 
 //0.4. Set Small Course
@@ -115,6 +120,11 @@ let small_wrong_links = document.querySelectorAll(".wrong-button");
 for (let i = 0; i < small_wrong_links.length; i++) {
   small_wrong_links[i].addEventListener("click", startWrong);
 }
+
+// let small_class_links = document.querySelectorAll(".class-button");
+// for (let i = 0; i < small_class_links.length; i++) {
+//   small_class_links[i].addEventListener("click", startClass);
+// }
 
 function pronClick(source) {
   var mp3File = "./audio/" + source;
@@ -190,6 +200,48 @@ function startQuiz() {
   queCounter(1); //passing 1 parameter to queCounter
   startTimer(); //calling startTimer function
   startTimerLine(); //calling startTimerLine function
+}
+
+function startClass() {
+  content.classList.add("slight_opacity");
+
+  curQuiz = this.id.substr(0, this.id.length - 5);
+
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  var modalContent = document.getElementsByClassName("modal-content")[0];
+  var myWidth = "600px";
+  var myHeight = "600px";
+  // When the user clicks on <span> (x), close the modal
+  modal.style.display = "block";
+
+  modalContent.innerHTML = '<span class="close">&times;</span><p>';
+
+  modalContent.innerHTML = modalContent.innerHTML + "</p>";
+  var imgContent =
+    "<img width=" +
+    myWidth +
+    " height=" +
+    myHeight +
+    "src='https://indigo-gourd-012.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0c0b51b8-d77c-4071-80b9-6c081ad9691d%2F002.png?table=block&id=16f8c6eb-d5c7-49fd-b4c0-19ce41ede31b&spaceId=983002ac-733f-40cf-b34f-d13e171ec134&width=1340&userId=&cache=v2'>";
+
+  imgContent =
+    "<img src='https://photos.google.com/album/AF1QipPZ9tRkjIAhPkRWgoLdUxPD4a-jG0A5d2hFhmF7/photo/AF1QipMGaxE4yUAS8C6kiydVajnag8BZ3ZgCAtJu8APq' />";
+
+  // imgContent =
+  //   "<img src='https://photos.google.com/album/AF1QipPZ9tRkjIAhPkRWgoLdUxPD4a-jG0A5d2hFhmF7/photo/AF1QipMGaxE4yUAS8C6kiydVajnag8BZ3ZgCAtJu8APq'>";
+
+  modalContent.innerHTML += imgContent;
+
+  var span = document.getElementsByClassName("close")[0];
+  span.addEventListener("click", closeClass);
+}
+
+function closeClass() {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "none";
+  content.classList.remove("slight_opacity");
 }
 
 function startWrong() {
