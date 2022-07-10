@@ -12,14 +12,14 @@
 # 學科，大項目，開放課程數，中項目代號，中項目解釋，題目類型,小項目，小項目解釋...
 ### 中文
 chinese,listen,99,han22,翰林國語二下,audio,1,1.媽媽在哪裡,2,2.喜歡這個新家,3,3.去探險,4,4.一場雨,5,5.笑容回來了,6,6.有禮貌的回答
-chinese,word,99,idiom,成語典,choose,1,P1-3,2,P4-6,3,P7-10,4,P11-13
+chinese,word,99,idiom,成語典,choose,1,P1-3,2,P4-6,3,P7-10,3,P11-13
 
 ### 英文
 english,word,999,200,英語小達人,choose,small,200字
 #english,word,999,test,測試,choose,small,5字
 english,word,999,7000,7000單字,choose,1,等級1 1634,2,等級2 1462,3,等級3 1456,4,等級4 252,5,等級5 2589,6,等級6 1328
 english,listen,5,recorder,詞語錄音機,audio,1,10題,2,100題
-english,combo,5,child1,兒童美語1,choose,1,第一課,https://indigo-gourd-012.notion.site/I-am-Rita-07c06decaa8e43e3a70eeb3e26a5d307,2,第二課,https://indigo-gourd-012.notion.site/He-is-Running-Bear-bbe9d269cea94befbfa186d2f083040d,3,第三課,https://indigo-gourd-012.notion.site/What-s-your-name-e5d218348a134b5cb19c5ab510d37dfa,4,第四課,https://indigo-gourd-012.notion.site/I-can-draw-17f7206868fb42118b0143a9a2814fed,5,複習,https://indigo-gourd-012.notion.site/7886f4157c024958ba64e4e4a028a949,6,第六課,https://indigo-gourd-012.notion.site/What-is-it-f64b8690d3c74a83ba9cb33e45ed2297
+english,combo,5,child1,兒童美語1,choose,1,第一課,https://indigo-gourd-012.notion.site/I-am-Rita-07c06decaa8e43e3a70eeb3e26a5d307,2,第二課,https://indigo-gourd-012.notion.site/He-is-Running-Bear-bbe9d269cea94befbfa186d2f083040d,3,第三課,https://indigo-gourd-012.notion.site/What-s-your-name-e5d218348a134b5cb19c5ab510d37dfa,4,第四課,https://indigo-gourd-012.notion.site/I-can-draw-17f7206868fb42118b0143a9a2814fed,5,複習,https://indigo-gourd-012.notion.site/7886f4157c024958ba64e4e4a028a949,6,第六課,https://indigo-gourd-012.notion.site/What-is-it-f64b8690d3c74a83ba9cb33e45ed2297,7,第七課,https://indigo-gourd-012.notion.site/Is-it-a-book-832963b9ed5e4f398c2f7dad5b9df973
 
 ### 日文
 japan,listen,5,recorder,詞語錄音機,audio,1,10題,2,100題
