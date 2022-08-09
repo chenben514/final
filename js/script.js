@@ -32,6 +32,8 @@ let curLevel = 0;
 let userInputAns = "";
 var curQuizType = "";
 var questions = "";
+let rowSelected;
+let startTime, finishTime;
 
 //0.1. Set Subject
 const subject_links = document.querySelectorAll(".side-nav__link");
@@ -137,6 +139,7 @@ function pronClick(source) {
     //   player.stop();
     // } else {
     player.src = mp3File;
+    player.currentTime = 29; // jumps to 29th secs
     player.play();
     // }
   } else {
@@ -160,10 +163,16 @@ function pronClick(source) {
 
 // if startQuiz button clicked
 function startQuiz() {
+  curQuiz = this.id;
+  var curQuizArr = curQuiz.split("-");
+  curQuizType = curQuizArr[0];
+
   //0.1 disable all test buttons
   let small_test_links = document.querySelectorAll(".test-button");
-  for (let i = 0; i < small_test_links.length; i++) {
-    small_test_links[i].disabled = true;
+  if (curQuizType != "conversation") {
+    for (let i = 0; i < small_test_links.length; i++) {
+      small_test_links[i].disabled = true;
+    }
   }
 
   let small_wrong_links = document.querySelectorAll(".wrong-button");
@@ -172,21 +181,19 @@ function startQuiz() {
   }
 
   //0.2. disable all test buttons
-  curQuiz = this.id;
-  var curQuizArr = curQuiz.split("-");
-  curQuizType = curQuizArr[0];
   //0.直接聽錄音
 
-  if (curQuizType == "conversation") {
-    var player = document.getElementById("radio");
-    player.hidden = false;
+  // if (curQuizType == "conversation") {
+  //   // var player = document.getElementById("radio");
+  //   // player.hidden = false;
 
-    pronClick(curQuizArr[1] + ".m4a");
-    return;
-  } else {
-    var player = document.getElementById("radio");
-    player.hidden = true;
-  }
+  //   //pronClick(curQuizArr[1] + ".m4a");
+  //   startAudio(this.id);
+  //   return;
+  // } else {
+  //   var player = document.getElementById("radio");
+  //   player.hidden = true;
+  // }
 
   if (curQuizType == "game") {
     hello();
@@ -284,6 +291,7 @@ function startWrong() {
 
   for (let k = 0; k < quesCnt; k++) {
     if (quesArr[k].length < 2) continue;
+    quesArr[k].replace("’", "'"); //change special characters
     tmpMessage = k + ",";
     var checkMessage = "," + tmpMessage;
     if (
@@ -1018,4 +1026,167 @@ function raiseStarLevel() {
   }
   localStorage.setItem(curQuiz + "_right", "");
   return;
+}
+
+//3. 播放器
+
+function startAudio(curQuiz) {
+  content.classList.add("slight_opacity");
+
+  var curQuizArr = curQuiz.split("-");
+  curQuizType = curQuizArr[0];
+
+  // Get the modal
+  var modal = document.getElementById("myAudio");
+
+  var modalContent = document.getElementById("modal-content-audio");
+  modalContent.setAttribute("Height", "200px");
+  // When the user clicks on <span> (x), close the modal
+  modal.style.display = "block";
+
+  var curQuizArr = curQuiz.split("-");
+  var selFile = "./data/" + curCourse + "/" + curQuizArr[1] + ".srt";
+
+  if (checkFileExist(selFile) == false) {
+    alert("Quiz file [" + selFile + "] does not exist.");
+    return false;
+  }
+
+  var read = new XMLHttpRequest();
+  read.open("GET", selFile, false);
+  read.setRequestHeader("Cache-Control", "no-cache");
+  read.send();
+
+  var displayName = read.responseText;
+  var quesArr = displayName.replace(/\r\n/g, "\n").split("\n");
+  let quesCnt = quesArr.length;
+
+  modalContent.innerHTML =
+    '<span class="close" id="closeAudio">&times;</span><p>';
+
+  /* 2. audio player */
+  let audio, source;
+  audio = document.createElement("audio");
+  audio.setAttribute("controls", "true");
+  audio.setAttribute("display", "true");
+  source = document.createElement("source");
+  source.setAttribute("src", "./audio/" + curQuizArr[1] + ".m4a");
+  source.setAttribute("type", "audio/wav");
+  audio.appendChild(source);
+  modalContent.appendChild(audio);
+
+  audio.load();
+  audio.play();
+
+  /* 3. table */
+  let t, th, c, r;
+  t = document.createElement("table");
+  t.setAttribute("class", "audio_table");
+  t.setAttribute("id", "my_audio_table");
+
+  for (let k = 0; k < quesCnt; k++) {
+    if (k % 4 == 0) {
+      r = t.insertRow(-1);
+      c = r.insertCell(-1);
+      c.innerHTML = quesArr[k];
+    }
+    if (k % 4 == 1) {
+      var timeArr = quesArr[k].split("-"); //00:01:01,440 --> 00:01:03,232
+      c = r.insertCell(-1);
+      c.innerHTML = timeArr[0];
+      var time2Arr = timeArr[2].split(">"); //00:01:01,440 --> 00:01:03,232
+      c = r.insertCell(-1);
+      c.innerHTML = time2Arr[1];
+    }
+    if (k % 4 == 2) {
+      c = r.insertCell(-1);
+      c.innerHTML = quesArr[k];
+    }
+  }
+  th = t.createTHead();
+  r = th.insertRow(0);
+  c = r.insertCell(-1);
+  c.innerHTML = "編號";
+  c = r.insertCell(-1);
+  c.innerHTML = "開始";
+  c = r.insertCell(-1);
+  c.innerHTML = "結束";
+  c = r.insertCell(-1);
+  c.innerHTML = "句子";
+
+  modalContent.appendChild(t);
+
+  const tbody = document.getElementById("my_audio_table");
+  let rowSelected;
+  let nowLoop = false;
+
+  tbody.onclick = (e) => {
+    for (let i = 0; i < e.path.length; ++i) {
+      if (e.path[i].tagName == "TR") {
+        selectRow(e.path[i]);
+        audio.removeEventListener("timeupdate", function () {
+          alert("nothing");
+        });
+
+        startTime = getSecond(e.path[i].cells[1].innerHTML);
+        audio.currentTime = startTime;
+        audio.play();
+        finishTime = getSecond(e.path[i].cells[2].innerHTML);
+
+        // var to = setTimeout(function () {
+        //   if (audio.currentTime > finishTime) {
+        //     audio.currentTime = startTime;
+        //   }
+        // }, 1000);
+
+        audio.addEventListener("timeupdate", function () {
+          if (audio.currentTime > finishTime) {
+            audio.pause();
+            audio.currentTime = startTime;
+            syncDelay(1000);
+            audio.play();
+          }
+        });
+
+        break;
+      }
+    }
+  };
+
+  function RespondTableClick() {}
+
+  var span = document.getElementById("closeAudio");
+  span.addEventListener("click", closeAudio);
+}
+
+function getSecond(inputTime) {
+  var secondArr = inputTime.split(":");
+  var hour = Number(secondArr[0]);
+  var minute = Number(secondArr[1]);
+  var second2Arr = secondArr[2].split(",");
+  var second = Number(second2Arr[0]);
+  var milliSecond = Number(second2Arr[1]);
+  second = second + minute * 60 + hour * 3600 + milliSecond * 0.001;
+  return second;
+}
+
+function selectRow(r) {
+  if (rowSelected !== undefined) rowSelected.style.color = "blue";
+
+  rowSelected = r;
+  rowSelected.style.color = "red";
+}
+
+function closeAudio() {
+  var modal = document.getElementById("myAudio");
+  modal.style.display = "none";
+  content.classList.remove("slight_opacity");
+}
+
+function syncDelay(milliseconds) {
+  var start = new Date().getTime();
+  var end = 0;
+  while (end - start < milliseconds) {
+    end = new Date().getTime();
+  }
 }
