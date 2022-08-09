@@ -15,7 +15,8 @@
 
     <title>Ben 的學習網</title>
   </head>
-  <body onselectstart="return false" >
+  <!-- <body onselectstart="return false" > -->
+    <body  > 
     <div class="container">
       <header class="header">
         <img src="img/BenLogo.png" alt="BenStudy logo" class="logo" />
@@ -160,10 +161,23 @@
 
 </div>
 
-<!-- 語音 -->
-<audio controls autoplay id="radio" hidden>
+<!-- 語音畫面 -->
+<div id="myAudio" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content" id="modal-content-audio">
+    <span class="close">&times;</span>
+    <p>Some text in the Audio..</p>
+  </div>
+
+</div>
+
+
+
+<!-- <audio controls autoplay id="radio" hidden>
 Your browser does not support the audio element.
 </audio>
+
 
 
 
@@ -181,3 +195,4 @@ Your browser does not support the audio element.
 
   </body>
 </html>
+
