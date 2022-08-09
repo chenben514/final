@@ -277,7 +277,7 @@ function startWrong() {
   read.setRequestHeader("Cache-Control", "no-cache");
   read.send();
 
-  var displayName = read.responseText;
+  var displayName = read.responseText.replace(/’/g, "'");
   var quesArr = displayName.replace(/\r\n/g, "\n").split("\n");
   let quesCnt = quesArr.length;
   let k = 0;
@@ -291,7 +291,6 @@ function startWrong() {
 
   for (let k = 0; k < quesCnt; k++) {
     if (quesArr[k].length < 2) continue;
-    quesArr[k].replace("’", "'"); //change special characters
     tmpMessage = k + ",";
     var checkMessage = "," + tmpMessage;
     if (
@@ -411,7 +410,7 @@ function getQuestions() {
   read.setRequestHeader("Cache-Control", "no-cache");
   read.send();
 
-  displayName = read.responseText;
+  displayName = read.responseText.replace(/’/g, "'");
 
   var quesArr = displayName.replace(/\r\n/g, "\n").split("\n");
   var quesList = [];
@@ -1057,7 +1056,7 @@ function startAudio(curQuiz) {
   read.setRequestHeader("Cache-Control", "no-cache");
   read.send();
 
-  var displayName = read.responseText;
+  var displayName = read.responseText.replace(/’/g, "'");
   var quesArr = displayName.replace(/\r\n/g, "\n").split("\n");
   let quesCnt = quesArr.length;
 
