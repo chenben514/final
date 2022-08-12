@@ -1,0 +1,7 @@
+1
+00:00:00,256 --> 00:00:06,400
+Typescript 49:2 I love my flower silk waistcoat
+
+2
+00:00:06,656 --> 00:00:11,264
+Very special occasions and I usually wait for the suit up

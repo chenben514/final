@@ -1,0 +1,63 @@
+1
+00:00:00,256 --> 00:00:01,792
+Typescript 47
+
+2
+00:00:02,560 --> 00:00:03,072
+2
+
+3
+00:00:08,960 --> 00:00:11,776
+Good morning Southwestern Bank can I help you
+
+4
+00:00:12,288 --> 00:00:14,336
+Yes I'd like to speak to Allison moorer please
+
+5
+00:00:14,848 --> 00:00:15,872
+Who's calling please
+
+6
+00:00:16,128 --> 00:00:17,664
+My name is Richard swainston
+
+7
+00:00:17,920 --> 00:00:20,736
+I'll try to put you through
+
+8
+00:00:22,272 --> 00:00:24,832
+Mister swainston I'm afraid she's on the other line
+
+9
+00:00:25,088 --> 00:00:27,392
+Would you like to hold yes thank you
+
+10
+00:00:34,560 --> 00:00:40,704
+Oh hello this is Richard swainston here
+
+11
+00:00:40,960 --> 00:00:47,104
+That seems to be a problem with your account what sort of problem
+
+12
+00:00:47,360 --> 00:00:53,504
+Discuss it are you available later on today
+
+13
+00:00:53,760 --> 00:00:59,904
+Freedom rather tied up today would tomorrow be convenient for you
+
+14
+00:01:00,160 --> 00:01:02,464
+Yes 10:30 is fine for me
+
+15
+00:01:02,720 --> 00:01:05,536
+Thank you for bringing I'll look forward to seeing you tomorrow
+
+16
+00:01:05,792 --> 00:01:06,560
+Goodbye

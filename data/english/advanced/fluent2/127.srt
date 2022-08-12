@@ -1,0 +1,403 @@
+1
+00:00:00,256 --> 00:00:01,280
+16
+
+2
+00:00:01,792 --> 00:00:02,816
+Review to
+
+3
+00:00:03,840 --> 00:00:05,120
+Typescript 55
+
+4
+00:00:06,656 --> 00:00:09,472
+So if we could turn to the origin of language
+
+5
+00:00:09,728 --> 00:00:12,032
+Do you know when we're on
+
+6
+00:00:13,056 --> 00:00:14,080
+Language originated
+
+7
+00:00:14,592 --> 00:00:19,200
+That's a difficult question to answer the answer is no one really knows
+
+8
+00:00:19,712 --> 00:00:20,224
+What we doing
+
+9
+00:00:20,736 --> 00:00:23,296
+Eastwind language was first written down
+
+10
+00:00:23,552 --> 00:00:26,880
+And that was about five and a half thousand years ago
+
+11
+00:00:27,392 --> 00:00:28,672
+About
+
+12
+00:00:29,184 --> 00:00:32,256
+The Sumerians who lived in Mesopotamia
+
+13
+00:00:32,512 --> 00:00:34,304
+The first people to write down their language
+
+14
+00:00:34,560 --> 00:00:36,096
+They use symbols called
+
+15
+00:00:36,352 --> 00:00:38,400
+Pictographs to represent everyday objects
+
+16
+00:00:38,656 --> 00:00:39,936
+Egyptian hieroglyphs
+
+17
+00:00:40,704 --> 00:00:44,800
+And the alphabet was developed around 3,500 years ago
+
+18
+00:00:45,056 --> 00:00:45,824
+By the Phoenicians
+
+19
+00:00:46,080 --> 00:00:48,896
+Who lived on the eastern coast of what is now Syria
+
+20
+00:00:49,920 --> 00:00:51,712
+Today there around 65
+
+21
+00:00:52,992 --> 00:00:57,088
+Interesting the one used in the Solomon Islands
+
+22
+00:00:57,344 --> 00:00:59,136
+As only 11 letters
+
+23
+00:00:59,392 --> 00:01:00,672
+Under the longest
+
+24
+00:01:02,976 --> 00:01:04,768
+I believe it's called 74
+
+25
+00:01:05,792 --> 00:01:08,096
+How many languages are there in the world today
+
+26
+00:01:08,352 --> 00:01:13,216
+Somewhere in the region of $4,000 will ever find out the exact
+
+27
+00:01:13,728 --> 00:01:16,032
+Which of these are the most spoken
+
+28
+00:01:16,288 --> 00:01:19,616
+Well Mandarin Chinese has about a billion speakers
+
+29
+00:01:19,872 --> 00:01:22,688
+English is next with about half billion speakers
+
+30
+00:01:22,944 --> 00:01:26,016
+And Hindi Spanish Russian behind
+
+31
+00:01:26,272 --> 00:01:30,368
+These five languages account for half of all the conversations in the world
+
+32
+00:01:31,136 --> 00:01:33,184
+Scientific truth Mandarin is the biggest line
+
+33
+00:01:33,696 --> 00:01:34,208
+I mean
+
+34
+00:01:34,464 --> 00:01:35,488
+The one with the most words
+
+35
+00:01:36,512 --> 00:01:37,792
+It's difficult to say
+
+36
+00:01:38,048 --> 00:01:39,328
+The latest thing
+
+37
+00:01:39,584 --> 00:01:41,888
+English is actually the biggest
+
+38
+00:01:42,400 --> 00:01:44,960
+Largely due to the number of Technical and scientific
+
+39
+00:01:46,496 --> 00:01:48,544
+At least a million
+
+40
+00:01:49,568 --> 00:01:52,384
+Most native speakers only use about 10,000 was
+
+41
+00:01:52,640 --> 00:01:54,176
+1%
+
+42
+00:01:54,432 --> 00:01:56,736
+Only 10,000
+
+43
+00:01:56,992 --> 00:01:59,808
+And can you guess which of these
+
+44
+00:02:00,064 --> 00:02:01,600
+The most used words in English
+
+45
+00:02:04,416 --> 00:02:04,928
+Maybe
+
+46
+00:02:05,440 --> 00:02:05,952
+Be
+
+47
+00:02:07,488 --> 00:02:09,280
+According to recent research
+
+48
+00:02:09,536 --> 00:02:11,840
+Tens of thousands of hours of conversation to be
+
+49
+00:02:14,144 --> 00:02:15,680
+The most common word is
+
+50
+00:02:17,728 --> 00:02:18,752
+Be
+
+51
+00:02:19,008 --> 00:02:25,152
+Will be we think is the most used but
+
+52
+00:02:25,664 --> 00:02:28,224
+What do you think about common noun in spoken English is
+
+53
+00:02:29,248 --> 00:02:32,320
+The most common noun maybe something like
+
+54
+00:02:33,856 --> 00:02:39,744
+Why did you just said it actually apparently it's
+
+55
+00:02:40,000 --> 00:02:43,072
+Sing
+
+56
+00:02:43,328 --> 00:02:44,864
+What about the origins of word
+
+57
+00:02:45,376 --> 00:02:51,520
+Where does English come from English which is about 500 years old
+
+58
+00:02:51,776 --> 00:02:53,568
+Mainly romance and Germanic language
+
+59
+00:02:54,336 --> 00:02:58,944
+Greek and Arabic Kabuto provided English with many would that digital sugar
+
+60
+00:02:59,200 --> 00:02:59,968
+Comes from Arabic
+
+61
+00:03:00,224 --> 00:03:02,016
+I'm surprisingly
+
+62
+00:03:02,272 --> 00:03:03,040
+Alcohol
+
+63
+00:03:03,296 --> 00:03:05,600
+Fax medic Mini
+
+64
+00:03:05,856 --> 00:03:07,904
+Happy borrowed from other languages
+
+65
+00:03:08,160 --> 00:03:08,928
+Example
+
+66
+00:03:09,184 --> 00:03:10,464
+Did you know that coffee
+
+67
+00:03:10,720 --> 00:03:11,744
+Come from Turkish
+
+68
+00:03:12,256 --> 00:03:13,536
+Chest the game
+
+69
+00:03:15,840 --> 00:03:18,400
+Where do you think ketchup as in tomato ketchup
+
+70
+00:03:18,656 --> 00:03:19,936
+Comes from
+
+71
+00:03:21,728 --> 00:03:23,776
+I've no idea
+
+72
+00:03:24,288 --> 00:03:25,568
+America
+
+73
+00:03:25,824 --> 00:03:27,616
+It's from the Malay language
+
+74
+00:03:27,872 --> 00:03:29,664
+Traditional Malaysian suicide
+
+75
+00:03:30,688 --> 00:03:31,968
+How about shampoo
+
+76
+00:03:33,504 --> 00:03:36,320
+Sounds a bit Oriental to Me Maybe Japanese
+
+77
+00:03:36,576 --> 00:03:38,368
+It's actually a Hindi word
+
+78
+00:03:38,624 --> 00:03:39,392
+India
+
+79
+00:03:39,648 --> 00:03:40,928
+The list is endless
+
+80
+00:03:41,184 --> 00:03:42,464
+You mentioned India
+
+81
+00:03:42,720 --> 00:03:45,536
+Is another country with hundreds of languages
+
+82
+00:03:45,792 --> 00:03:46,304
+Well
+
+83
+00:03:46,560 --> 00:03:48,352
+I don't know about hundred
+
+84
+00:03:48,608 --> 00:03:51,168
+I think Papua New Guinea is got the most
+
+85
+00:03:51,424 --> 00:03:53,728
+With 850 separately
+
+86
+00:03:53,984 --> 00:03:56,032
+India has gone.
+
+87
+00:03:57,568 --> 00:03:59,616
+The banknotes
+
+88
+00:04:00,896 --> 00:04:02,432
+I suppose they're the main line
+
+89
+00:04:03,456 --> 00:04:06,016
+Most people that speak at least two or three
+
+90
+00:04:08,320 --> 00:04:09,344
+And one
+
+91
+00:04:09,600 --> 00:04:10,368
+Final question
+
+92
+00:04:10,880 --> 00:04:13,696
+Speak two languages fluently is difficult enough
+
+93
+00:04:13,952 --> 00:04:18,303
+But have you any idea what the highest number of languages spoken by one person is
+
+94
+00:04:19,071 --> 00:04:20,095
+That eat
+
+95
+00:04:20,351 --> 00:04:20,863
+What was
+
+96
+00:04:21,119 --> 00:04:22,911
+A Frenchman
+
+97
+00:04:23,167 --> 00:04:24,447
+Complement
+
+98
+00:04:25,215 --> 00:04:25,983
+Bespoke
+
+99
+00:04:26,239 --> 00:04:28,031
+31 different languages
+
+100
+00:04:32,127 --> 00:04:38,271
+Will say thank you very much and
+
+101
+00:04:39,807 --> 00:04:40,319
+Audio

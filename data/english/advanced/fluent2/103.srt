@@ -1,0 +1,143 @@
+1
+00:00:00,256 --> 00:00:01,536
+Typescript 48
+
+2
+00:00:08,448 --> 00:00:08,960
+Hello
+
+3
+00:00:09,728 --> 00:00:10,752
+Mom it's Richard
+
+4
+00:00:11,008 --> 00:00:12,288
+Oh
+
+5
+00:00:12,800 --> 00:00:15,360
+Is everything alright yes yes fine
+
+6
+00:00:15,616 --> 00:00:21,760
+How are you oh not too bad so I'm enjoying the peace and quiet
+
+7
+00:00:22,272 --> 00:00:24,832
+How's Maggie she's okay
+
+8
+00:00:25,088 --> 00:00:26,112
+Working hard
+
+9
+00:00:26,624 --> 00:00:28,416
+Mom I was wondering
+
+10
+00:00:28,672 --> 00:00:31,488
+Do you think you could lend me some money till the end of the month
+
+11
+00:00:33,536 --> 00:00:39,424
+Have you got yourself into debt again because if you have
+
+12
+00:00:39,680 --> 00:00:41,984
+Money
+
+13
+00:00:42,496 --> 00:00:48,640
+I mean you've got a good job Mom it's expensive living in Bristol
+
+14
+00:00:48,896 --> 00:00:55,040
+What you expect if you go out every night and buy expensive computers I haven't gotten
+
+15
+00:00:55,296 --> 00:00:56,064
+Computer
+
+16
+00:00:56,320 --> 00:00:59,392
+It's a PlayStation
+
+17
+00:01:00,160 --> 00:01:03,488
+I mean your sister never phone's up asking for money
+
+18
+00:01:03,744 --> 00:01:09,120
+You spent a fortune wedding
+
+19
+00:01:09,376 --> 00:01:13,472
+Well I'm not going to get married so you might as well give me the money no
+
+20
+00:01:14,240 --> 00:01:15,264
+What would Maggie say
+
+21
+00:01:16,288 --> 00:01:17,824
+Silly
+
+22
+00:01:18,336 --> 00:01:19,360
+How much do you need
+
+23
+00:01:20,128 --> 00:01:21,152
+300 lb
+
+24
+00:01:21,664 --> 00:01:23,456
+Honesty Richard
+
+25
+00:01:23,968 --> 00:01:27,296
+You really must learn to budget look Mom if you can
+
+26
+00:01:27,552 --> 00:01:33,696
+Just help me out this time I promise I'll try to be more careful in the future
+
+27
+00:01:34,208 --> 00:01:38,304
+Listen to it this time but this really is the last time
+
+28
+00:01:38,816 --> 00:01:42,912
+If you get yourself into trouble again you'll just have to sort it out yourself
+
+29
+00:01:43,168 --> 00:01:46,240
+Thanks Mom I'm doing this on one condition
+
+30
+00:01:46,496 --> 00:01:47,264
+Yes
+
+31
+00:01:47,520 --> 00:01:50,080
+You never say you're not going to get married again
+
+32
+00:01:50,592 --> 00:01:52,128
+Okay I promise
+
+33
+00:01:52,640 --> 00:01:53,152
+Thanks Mom
+
+34
+00:01:53,664 --> 00:01:54,176
+Bye
+
+35
+00:01:54,432 --> 00:01:56,480
+By next time
+
+36
+00:01:56,736 --> 00:01:59,040
+You could phone up Jeffery chat
