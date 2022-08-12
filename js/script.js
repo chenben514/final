@@ -183,13 +183,14 @@ function startQuiz() {
   //0.2. disable all test buttons
   //0.直接聽錄音
 
-  // if (curQuizType == "conversation") {
+  if (curQuizType == "conversation") {
+    startAudio(this.id);
+    return;
+  }
   //   // var player = document.getElementById("radio");
   //   // player.hidden = false;
 
-  //   //pronClick(curQuizArr[1] + ".m4a");
-  //   startAudio(this.id);
-  //   return;
+  //pronClick(curQuizArr[1] + ".m4a");
   // } else {
   //   var player = document.getElementById("radio");
   //   player.hidden = true;
@@ -1044,7 +1045,18 @@ function startAudio(curQuiz) {
   modal.style.display = "block";
 
   var curQuizArr = curQuiz.split("-");
-  var selFile = "./data/" + curCourse + "/" + curQuizArr[1] + ".srt";
+  var curTopicArr = curQuizArr[1].split("_");
+  // var selFile = "./data/" + curCourse + "/" + curQuizArr[1] + ".srt";
+  var selFile =
+    "./data/" +
+    curTopicArr[0] +
+    "/" +
+    curTopicArr[1] +
+    "/" +
+    curTopicArr[2] +
+    "/" +
+    curTopicArr[3] +
+    ".srt";
 
   if (checkFileExist(selFile) == false) {
     alert("Quiz file [" + selFile + "] does not exist.");
@@ -1069,7 +1081,21 @@ function startAudio(curQuiz) {
   audio.setAttribute("controls", "true");
   audio.setAttribute("display", "true");
   source = document.createElement("source");
-  source.setAttribute("src", "./audio/" + curQuizArr[1] + ".m4a");
+  // source.setAttribute("src", "./audio/" + curQuizArr[1] + ".m4a");
+
+  source.setAttribute(
+    "src",
+    "./audio/" +
+      curTopicArr[0] +
+      "/" +
+      curTopicArr[1] +
+      "/" +
+      curTopicArr[2] +
+      "/" +
+      curTopicArr[3] +
+      ".mp3"
+  );
+
   source.setAttribute("type", "audio/wav");
   audio.appendChild(source);
   modalContent.appendChild(audio);

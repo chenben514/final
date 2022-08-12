@@ -213,7 +213,8 @@ function showTopic() {
 
       if (
         curProcCnt < topics[i].open_course_cnt &&
-        topics[i].main_subj != "game"
+        topics[i].main_subj != "game" &&
+        topics[i].main_subj != "advanced"
       ) {
         if (
           curWrongStorage != null &&
@@ -250,7 +251,8 @@ function showTopic() {
 
       if (
         curProcCnt < topics[i].open_course_cnt &&
-        topics[i].main_subj != "game"
+        topics[i].main_subj != "game" &&
+        topics[i].main_subj != "advanced"
       ) {
         var curClassID = curBaseID + "_class";
         if (topics[i].small_subj_html[j].startsWith("http")) {
