@@ -321,9 +321,9 @@ body {
 
 .test-button {
   height: 5rem;
-  width: 8rem;
+  width: 9rem;
   font-size: 1.7rem;
-  padding: 0.1rem;
+  padding: 0rem;
   color: blue;
   background-color: lightgray; }
 
