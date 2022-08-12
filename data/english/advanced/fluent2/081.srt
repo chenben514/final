@@ -1,0 +1,375 @@
+1
+00:00:00,256 --> 00:00:00,768
+10
+
+2
+00:00:01,536 --> 00:00:02,048
+Time
+
+3
+00:00:03,584 --> 00:00:04,864
+Typescript 36
+
+4
+00:00:11,264 --> 00:00:14,336
+Atwood Sonny Vazquez midnight in Vermont
+
+5
+00:00:15,360 --> 00:00:15,872
+No
+
+6
+00:00:16,128 --> 00:00:18,176
+Do you make the best of your time
+
+7
+00:00:18,944 --> 00:00:21,760
+In the studio today we've got Roberta Wilson
+
+8
+00:00:22,016 --> 00:00:25,088
+Who's that time Management Consultant good morning Roberta
+
+9
+00:00:25,344 --> 00:00:26,112
+Good morning Paul
+
+10
+00:00:26,624 --> 00:00:28,928
+Roberta what exactly the time
+
+11
+00:00:29,184 --> 00:00:30,208
+Consultants to
+
+12
+00:00:30,720 --> 00:00:35,328
+Well Paul it's all about helping people to organize their work in an effective way
+
+13
+00:00:35,840 --> 00:00:36,864
+Maximum efficiency
+
+14
+00:00:37,120 --> 00:00:38,144
+Minimum stress
+
+15
+00:00:38,400 --> 00:00:39,680
+Sounds like something I need
+
+16
+00:00:39,936 --> 00:00:41,216
+Who are your clients
+
+17
+00:00:41,472 --> 00:00:47,616
+Mainly business people but I've also worked with politicians civil servants and University lectures
+
+18
+00:00:48,128 --> 00:00:49,408
+Quite a range that
+
+19
+00:00:49,664 --> 00:00:52,992
+What sort of things help people to organize their time
+
+20
+00:00:53,504 --> 00:00:55,296
+I suppose punctuality is it
+
+21
+00:00:55,552 --> 00:00:57,856
+Important yes and no
+
+22
+00:00:58,368 --> 00:01:01,696
+It's easier to finish a meeting on time if it starts on time but
+
+23
+00:01:01,952 --> 00:01:05,024
+In international context you do have to be aware of
+
+24
+00:01:05,280 --> 00:01:05,792
+Cultural
+
+25
+00:01:06,560 --> 00:01:07,328
+For example
+
+26
+00:01:07,840 --> 00:01:08,352
+Well
+
+27
+00:01:08,608 --> 00:01:14,752
+In Britain big formal meetings usually start on time but less formal meetings often begin a few minutes
+
+28
+00:01:15,776 --> 00:01:17,568
+In Germany on the other hand
+
+29
+00:01:17,824 --> 00:01:20,384
+People expect all meetings to begin on time
+
+30
+00:01:21,152 --> 00:01:24,224
+In some countries for example Latin America
+
+31
+00:01:24,480 --> 00:01:26,784
+There's some more relaxed attitude
+
+32
+00:01:27,040 --> 00:01:28,576
+So you do have to adapt
+
+33
+00:01:28,832 --> 00:01:29,344
+To circumstance
+
+34
+00:01:29,856 --> 00:01:32,160
+When in Rome to some extent yes
+
+35
+00:01:32,928 --> 00:01:39,072
+It sounds like even if you manage your own time very well you still can't control what other people do
+
+36
+00:01:39,328 --> 00:01:41,376
+Well you can set limits
+
+37
+00:01:41,632 --> 00:01:44,704
+If you're meeting a friend who always arrives late you can say
+
+38
+00:01:44,960 --> 00:01:45,472
+Well
+
+39
+00:01:45,728 --> 00:01:47,264
+I'm going to wait for 15 minutes
+
+40
+00:01:47,776 --> 00:01:48,800
+If they aren't there by then
+
+41
+00:01:49,056 --> 00:01:49,824
+I'll leave
+
+42
+00:01:50,848 --> 00:01:53,408
+I've got one friend who's always late
+
+43
+00:01:53,920 --> 00:01:55,712
+I don't think I'd ever see her if I did
+
+44
+00:01:56,736 --> 00:02:00,576
+People who are always late are the ones you need to set limits with
+
+45
+00:02:01,088 --> 00:02:02,880
+If they know that you won't wait
+
+46
+00:02:03,392 --> 00:02:04,672
+Perhaps they'll make an effort
+
+47
+00:02:04,928 --> 00:02:05,440
+Isn't that
+
+48
+00:02:05,696 --> 00:02:07,744
+Rather harsh not really
+
+49
+00:02:08,256 --> 00:02:12,352
+Someone who constantly turns up late is putting a low value on your time
+
+50
+00:02:12,864 --> 00:02:14,912
+Let them know you got other things to do
+
+51
+00:02:15,168 --> 00:02:17,472
+Suggesting you do that with everyone
+
+52
+00:02:17,984 --> 00:02:18,752
+Just a sister
+
+53
+00:02:19,008 --> 00:02:19,520
+Latecomers
+
+54
+00:02:20,288 --> 00:02:21,056
+Again
+
+55
+00:02:21,312 --> 00:02:25,408
+Different cultures do have different viewpoints on what constitutes serious lateness
+
+56
+00:02:26,176 --> 00:02:27,200
+What about interrupt
+
+57
+00:02:28,224 --> 00:02:30,016
+I often come into the studio with
+
+58
+00:02:30,272 --> 00:02:32,064
+Something important I need to do
+
+59
+00:02:32,576 --> 00:02:33,600
+Then the phone rings
+
+60
+00:02:33,856 --> 00:02:35,136
+Someone comes to see me
+
+61
+00:02:35,392 --> 00:02:36,160
+Before I know it
+
+62
+00:02:36,416 --> 00:02:39,488
+The day's over and I haven't done what I planned
+
+63
+00:02:39,744 --> 00:02:41,792
+You need to defend your time
+
+64
+00:02:42,560 --> 00:02:44,096
+If you're working on something important
+
+65
+00:02:44,608 --> 00:02:46,144
+And someone drops in to see you
+
+66
+00:02:46,400 --> 00:02:47,424
+Get your diarrhea
+
+67
+00:02:47,936 --> 00:02:49,728
+Politely tell them you're busy
+
+68
+00:02:49,984 --> 00:02:51,776
+I make an appointment for another time
+
+69
+00:02:52,288 --> 00:02:56,384
+Is it is an important anyways I'll just go away if it is
+
+70
+00:02:56,640 --> 00:02:59,200
+Make an appointment when you can deal with it properly
+
+71
+00:02:59,712 --> 00:03:00,480
+That sounds practical
+
+72
+00:03:00,992 --> 00:03:03,552
+Again you do have to be careful
+
+73
+00:03:03,808 --> 00:03:08,160
+In some cultures particularly Latin ones this technique can upset people
+
+74
+00:03:08,672 --> 00:03:11,744
+Here in the United States almost
+
+75
+00:03:12,768 --> 00:03:15,072
+So does everything depend on culture
+
+76
+00:03:15,584 --> 00:03:16,096
+No
+
+77
+00:03:16,608 --> 00:03:20,448
+Attitudes to time or one of the big differences between cultures but
+
+78
+00:03:20,704 --> 00:03:23,520
+How you organize your own work is up to you
+
+79
+00:03:23,776 --> 00:03:25,824
+And there are lots of techniques here
+
+80
+00:03:26,336 --> 00:03:26,848
+For example
+
+81
+00:03:27,616 --> 00:03:30,176
+Imagine you got two important things to do
+
+82
+00:03:30,688 --> 00:03:31,712
+One of them is Pleasant
+
+83
+00:03:32,224 --> 00:03:32,992
+The other isn't
+
+84
+00:03:33,760 --> 00:03:36,576
+Always try to do the unpleasant task first
+
+85
+00:03:36,832 --> 00:03:40,416
+That way the pleasant tasks is a reward for finishing
+
+86
+00:03:40,928 --> 00:03:46,560
+If you do it the other way around you'll tend to slow down the pleasant tasks because you don't want to do the unpleasant one
+
+87
+00:03:47,072 --> 00:03:48,096
+I remember that
+
+88
+00:03:48,864 --> 00:03:54,240
+Finally what for you is a hardworking person so I'm not very interested in
+
+89
+00:03:54,496 --> 00:03:55,520
+Hard-working people
+
+90
+00:03:56,032 --> 00:03:59,616
+You can spend 12 hours a day at the office without doing very much
+
+91
+00:04:00,384 --> 00:04:03,456
+Interested in productive and happy people
+
+92
+00:04:03,968 --> 00:04:06,528
+And on that note I have to say we've run out of time
+
+93
+00:04:07,040 --> 00:04:08,064
+Thank you Roberta
+
+94
+00:04:08,320 --> 00:04:10,112
+Andover to Jasmine.

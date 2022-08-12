@@ -1,0 +1,15 @@
+1
+00:00:00,256 --> 00:00:01,792
+Typescript 14
+
+2
+00:00:04,864 --> 00:00:11,008
+Have you ever had a sports injury I was playing rugby for the local team and it was just after kickoff
+
+3
+00:00:11,264 --> 00:00:17,408
+I was jumping up to catch the ball if a player from the other team knocked me over enough fell heavily in my left leg
+
+4
+00:00:17,664 --> 00:00:23,808
+Yes I twisted my ankle and couldn't play rugby for more than 3 months

@@ -1,0 +1,11 @@
+1
+00:00:00,256 --> 00:00:04,096
+Typescript 46.
+
+2
+00:00:04,864 --> 00:00:11,008
+This is Alex virgin Megastore the new computer game
+
+3
+00:00:11,264 --> 00:00:17,152
+Can you order this coming please call by and pick it up thank you

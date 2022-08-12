@@ -1,0 +1,11 @@
+1
+00:00:00,256 --> 00:00:03,328
+Typescript 75
+
+2
+00:00:04,352 --> 00:00:10,496
+Are you enjoying it yeah I found a bit difficult to get into but now that I'm past the first
+
+3
+00:00:10,752 --> 00:00:12,800
+Do chapters icon put it down

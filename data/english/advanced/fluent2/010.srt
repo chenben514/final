@@ -1,0 +1,31 @@
+1
+00:00:00,256 --> 00:00:01,536
+Typescript shakes
+
+2
+00:00:02,048 --> 00:00:03,072
+Sally
+
+3
+00:00:04,608 --> 00:00:08,704
+Do you think you are relaxed person.
+
+4
+00:00:08,960 --> 00:00:12,800
+I don't think I'm very good relaxing I don't like sitting around doing nothing
+
+5
+00:00:13,056 --> 00:00:18,944
+So what do you do in your free time time
+
+6
+00:00:19,200 --> 00:00:25,344
+Once a month I get a babysitter and go don't do with my friend we lost a lot and that's what I find relaxing
+
+7
+00:00:25,856 --> 00:00:28,160
+What do you think of the little book of calm
+
+8
+00:00:28,416 --> 00:00:30,720
+I didn't think it was written two people three children

@@ -1,0 +1,35 @@
+1
+00:00:00,256 --> 00:00:01,024
+8
+
+2
+00:00:01,280 --> 00:00:02,560
+Review one
+
+3
+00:00:02,816 --> 00:00:04,352
+Typescript 32
+
+4
+00:00:05,376 --> 00:00:05,888
+Sue
+
+5
+00:00:07,168 --> 00:00:13,312
+We met at University we both studied music actually and I suppose we hit it off straight away
+
+6
+00:00:13,568 --> 00:00:17,920
+Afterwards I went away traveling for gyro so we lost touch for a while
+
+7
+00:00:18,176 --> 00:00:21,248
+But really we've been friends since we were students
+
+8
+00:00:21,504 --> 00:00:25,600
+We see each other say three or four times a week I guess
+
+9
+00:00:25,856 --> 00:00:30,976
+The best carryout going and energetic which I suppose is why we get on so well in the band

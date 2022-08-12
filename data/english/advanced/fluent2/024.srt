@@ -1,0 +1,83 @@
+1
+00:00:00,256 --> 00:00:01,024
+3
+
+2
+00:00:01,536 --> 00:00:02,304
+Dating
+
+3
+00:00:03,072 --> 00:00:04,352
+Typescript 9
+
+4
+00:00:04,864 --> 00:00:06,144
+Tom and Kathy
+
+5
+00:00:08,448 --> 00:00:14,592
+Kathy we last heard from you when you are about to meet Tom for the first time that's right it was
+
+6
+00:00:14,848 --> 00:00:20,992
+Easier for me to take time off work so I booked a flight to Denver that's a long way to go for a date
+
+7
+00:00:21,248 --> 00:00:27,136
+I'd rather expensive to we share the cost of the flight Tom's a very generous man
+
+8
+00:00:27,392 --> 00:00:31,232
+Anybody he arranged to meet me at the airport and when was that
+
+9
+00:00:31,488 --> 00:00:33,280
+It was almost a year ago
+
+10
+00:00:34,048 --> 00:00:36,352
+I felt really nervous but I couldn't wait to meet Tom
+
+11
+00:00:36,608 --> 00:00:38,400
+Oh yes
+
+12
+00:00:38,656 --> 00:00:39,936
+I spotted him immediately
+
+13
+00:00:40,448 --> 00:00:44,032
+He look just like his photograph was it love at first sight
+
+14
+00:00:44,544 --> 00:00:46,080
+I'm afraid not.
+
+15
+00:00:46,592 --> 00:00:50,688
+I couldn't have predicted what happened but something put me off in straightaway
+
+16
+00:00:51,200 --> 00:00:53,248
+I didn't even leave the airport
+
+17
+00:00:53,504 --> 00:00:55,808
+I just turned round and came straight back to Ireland
+
+18
+00:00:56,320 --> 00:00:59,392
+We haven't been in touch since that day
+
+19
+00:00:59,648 --> 00:01:01,184
+What was it that put you off
+
+20
+00:01:02,720 --> 00:01:04,768
+It's going to sound really stupid
+
+21
+00:01:05,280 --> 00:01:07,072
+But I hated it shoes

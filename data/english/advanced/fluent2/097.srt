@@ -1,0 +1,47 @@
+1
+00:00:00,256 --> 00:00:02,048
+Typescript 46
+
+2
+00:00:02,304 --> 00:00:03,072
+3
+
+3
+00:00:06,400 --> 00:00:08,448
+Richard H Andrew
+
+4
+00:00:08,704 --> 00:00:12,032
+I just had a cold for me and Watson at Smith's insurance
+
+5
+00:00:12,544 --> 00:00:16,384
+They got a problem with the program we installed on my network last week
+
+6
+00:00:16,640 --> 00:00:20,224
+I told you I'll get somebody out there as soon as possible to sort it out
+
+7
+00:00:20,992 --> 00:00:25,344
+Could you phone him first thing tomorrow morning and arrange to go out there and see what you can do
+
+8
+00:00:25,856 --> 00:00:29,184
+The number is 01225
+
+9
+00:00:29,440 --> 00:00:30,464
+302
+
+10
+00:00:30,720 --> 00:00:31,744
+602
+
+11
+00:00:32,000 --> 00:00:35,072
+Give me a call to the office to let me know what you've arranged
+
+12
+00:00:35,328 --> 00:00:37,888
+Thanks

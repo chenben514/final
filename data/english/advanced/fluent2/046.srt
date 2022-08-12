@@ -1,0 +1,11 @@
+1
+00:00:00,256 --> 00:00:02,304
+Typescript 18
+
+2
+00:00:02,560 --> 00:00:08,704
+Humpty Dumpty sat on a wall Humpty Dumpty had a great fall all the king
+
+3
+00:00:08,960 --> 00:00:13,312
+King's horses and all the king's men couldn't put Humpty together again

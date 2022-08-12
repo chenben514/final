@@ -1,0 +1,19 @@
+1
+00:00:00,256 --> 00:00:02,048
+Typescript 46
+
+2
+00:00:02,304 --> 00:00:03,840
+2
+
+3
+00:00:05,888 --> 00:00:12,032
+This is Simon from Tim's Cabo company we finally got your tickets for 10 days scuba diving and
+
+4
+00:00:12,288 --> 00:00:14,592
+Coupon pick him up anytime
+
+5
+00:00:14,848 --> 00:00:17,152
+Open from 9 to 5 everyday

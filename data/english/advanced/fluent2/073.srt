@@ -1,0 +1,43 @@
+1
+00:00:00,256 --> 00:00:01,792
+Typescript 33
+
+2
+00:00:03,072 --> 00:00:06,144
+Where do you live in Paris really
+
+3
+00:00:06,400 --> 00:00:08,448
+Whereabouts do you know Paris
+
+4
+00:00:08,704 --> 00:00:13,824
+Quite well I've got a friend that right I'm right in the center
+
+5
+00:00:14,080 --> 00:00:16,384
+It shows that he's a nice
+
+6
+00:00:16,640 --> 00:00:18,432
+Which street Rumba birth
+
+7
+00:00:18,944 --> 00:00:19,456
+Do you know it
+
+8
+00:00:19,712 --> 00:00:20,992
+I think so
+
+9
+00:00:21,248 --> 00:00:24,064
+Is it just the opposite that big Cafe that's right
+
+10
+00:00:24,320 --> 00:00:25,088
+Yeah
+
+11
+00:00:25,344 --> 00:00:27,904
+My friend lives in roof of what's around the corner

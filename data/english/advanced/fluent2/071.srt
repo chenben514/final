@@ -1,0 +1,35 @@
+1
+00:00:00,256 --> 00:00:01,792
+Typescript 32
+
+2
+00:00:02,048 --> 00:00:03,840
+Cindy
+
+3
+00:00:05,120 --> 00:00:09,984
+We've known each other for a few years now and we still get on well
+
+4
+00:00:10,240 --> 00:00:12,032
+Most of the time anyway
+
+5
+00:00:12,800 --> 00:00:14,848
+We see each other a lot
+
+6
+00:00:15,104 --> 00:00:19,456
+Of course we are together twice a week when the boundary houses
+
+7
+00:00:19,712 --> 00:00:25,856
+We often go to pubs or two friends houses and just sort of hang out and chat
+
+8
+00:00:26,112 --> 00:00:26,624
+Really
+
+9
+00:00:26,880 --> 00:00:29,952
+Yes we both love a good party

@@ -1,0 +1,39 @@
+1
+00:00:00,256 --> 00:00:01,792
+Typescript shakes
+
+2
+00:00:02,304 --> 00:00:03,328
+Robert
+
+3
+00:00:05,632 --> 00:00:07,936
+Do you think you're a relaxed person
+
+4
+00:00:08,192 --> 00:00:14,336
+I don't know I thought I was until I read the little book of come what do you think of it I think it's rubbish
+
+5
+00:00:14,592 --> 00:00:18,176
+I mean I like warm water or coffee in it
+
+6
+00:00:18,688 --> 00:00:21,248
+I never had a massage or a nap during the day
+
+7
+00:00:21,504 --> 00:00:23,040
+But I don't get stressed out very often
+
+8
+00:00:23,296 --> 00:00:25,600
+How do you relax when you're not working
+
+9
+00:00:25,856 --> 00:00:30,976
+Go for a walk in the park now and again and reading evening I like reading
+
+10
+00:00:31,232 --> 00:00:36,096
+But I'm so tired of the work that I frequently fall asleep with the book in my hands and the lights on

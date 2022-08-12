@@ -1,0 +1,7 @@
+1
+00:00:00,256 --> 00:00:06,400
+Typescript 24g you don't usually take the
+
+2
+00:00:06,656 --> 00:00:12,800
+The bus has broken down again

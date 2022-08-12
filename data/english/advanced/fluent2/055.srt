@@ -1,0 +1,11 @@
+1
+00:00:00,256 --> 00:00:03,072
+Typescript 24d
+
+2
+00:00:07,936 --> 00:00:14,080
+I just had some bad news what's happened I failed my final exams I'm sorry
+
+3
+00:00:15,104 --> 00:00:16,384
+To reset them

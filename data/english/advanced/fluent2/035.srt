@@ -1,0 +1,39 @@
+1
+00:00:00,256 --> 00:00:01,792
+Typescript 14
+
+2
+00:00:04,864 --> 00:00:06,912
+Have you ever thought you were going to die
+
+3
+00:00:07,424 --> 00:00:11,776
+Yeah it was when I was eight or nine and I was at the beach with my parents
+
+4
+00:00:12,032 --> 00:00:18,176
+I was playing in the city but on the edge because I couldn't swim suddenly I realized I couldn't feel the bump
+
+5
+00:00:18,432 --> 00:00:20,992
+Tennessee was pulling me further away from the beach
+
+6
+00:00:21,504 --> 00:00:25,344
+Profuse seconds I panicked how do I start
+
+7
+00:00:25,856 --> 00:00:27,136
+Then I felt really calm
+
+8
+00:00:27,392 --> 00:00:28,928
+As if I was floating away
+
+9
+00:00:29,696 --> 00:00:30,720
+August
+
+10
+00:00:31,232 --> 00:00:34,560
+Fortunately someone saw me and pulled me out in time

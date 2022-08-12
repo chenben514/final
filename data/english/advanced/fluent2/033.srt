@@ -1,0 +1,19 @@
+1
+00:00:00,256 --> 00:00:01,792
+Tank script 14
+
+2
+00:00:02,048 --> 00:00:03,840
+City
+
+3
+00:00:04,352 --> 00:00:09,216
+Have you ever broken a bone yes I've broken my nose twice
+
+4
+00:00:09,472 --> 00:00:13,824
+The first time I was playing football and one of the other players hit me in the face
+
+5
+00:00:14,080 --> 00:00:19,200
+The second time I was playing tennis I miss the ball and it hit me right on my nose

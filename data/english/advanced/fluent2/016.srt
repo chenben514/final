@@ -1,0 +1,15 @@
+1
+00:00:00,256 --> 00:00:01,536
+Typescript 7
+
+2
+00:00:01,792 --> 00:00:06,144
+6 what did you think of the special effect
+
+3
+00:00:06,656 --> 00:00:12,800
+What special effect is all done with computers
+
+4
+00:00:13,056 --> 00:00:14,336
+Spoilt it now

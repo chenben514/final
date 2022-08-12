@@ -1,0 +1,75 @@
+1
+00:00:00,256 --> 00:00:02,304
+Typescript to
+
+2
+00:00:02,816 --> 00:00:04,608
+Hey
+
+3
+00:00:04,864 --> 00:00:06,144
+Where were you born
+
+4
+00:00:09,472 --> 00:00:11,008
+Do you still live in London
+
+5
+00:00:12,800 --> 00:00:14,080
+See
+
+6
+00:00:14,336 --> 00:00:15,616
+How long have you been there
+
+7
+00:00:18,944 --> 00:00:20,224
+Are you happy there
+
+8
+00:00:23,040 --> 00:00:24,832
+Have you made any new friends
+
+9
+00:00:28,160 --> 00:00:29,440
+What do you do for a living
+
+10
+00:00:32,512 --> 00:00:34,304
+What do you do in your free time
+
+11
+00:00:36,096 --> 00:00:37,120
+H
+
+12
+00:00:37,376 --> 00:00:39,168
+What sort of music do you like
+
+13
+00:00:41,984 --> 00:00:44,032
+Do you ever listen to The Rolling Stones
+
+14
+00:00:45,568 --> 00:00:46,848
+Jay
+
+15
+00:00:47,104 --> 00:00:49,152
+How often do you see your parents
+
+16
+00:00:50,688 --> 00:00:51,712
+Okay
+
+17
+00:00:52,224 --> 00:00:54,272
+What's your favorite place in the world
+
+18
+00:00:55,808 --> 00:00:56,832
+Oh
+
+19
+00:00:57,600 --> 00:00:59,392
+Who chose your name

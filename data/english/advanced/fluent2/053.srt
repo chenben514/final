@@ -1,0 +1,15 @@
+1
+00:00:00,256 --> 00:00:03,328
+Typescript 24b
+
+2
+00:00:03,584 --> 00:00:09,728
+Hello please do yourself
+
+3
+00:00:09,984 --> 00:00:11,776
+I just passed my driving test
+
+4
+00:00:13,824 --> 00:00:15,104
+Shopping list

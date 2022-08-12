@@ -1,0 +1,15 @@
+1
+00:00:00,256 --> 00:00:02,048
+Typescript 7
+
+2
+00:00:02,304 --> 00:00:03,328
+7
+
+3
+00:00:04,608 --> 00:00:08,704
+Did you have a good time not really I can't stand all that techno stuff
+
+4
+00:00:08,960 --> 00:00:14,080
+I like it when you can actually hear the lyrics what did you say nothing

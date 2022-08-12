@@ -1,0 +1,23 @@
+1
+00:00:00,256 --> 00:00:02,048
+Typescript 46
+
+2
+00:00:02,304 --> 00:00:03,072
+6
+
+3
+00:00:05,632 --> 00:00:11,776
+Hello this is Allison Moore from the Southwestern Bank can you bring me to discuss your overdraft
+
+4
+00:00:12,032 --> 00:00:15,872
+1751 5633
+
+5
+00:00:16,128 --> 00:00:17,664
+300
+
+6
+00:00:17,920 --> 00:00:20,224
+Thank you

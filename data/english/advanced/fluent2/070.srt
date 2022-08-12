@@ -1,0 +1,27 @@
+1
+00:00:00,256 --> 00:00:01,792
+Typescript 32
+
+2
+00:00:02,048 --> 00:00:03,840
+Enrico
+
+3
+00:00:05,376 --> 00:00:11,264
+We've got similar interests particularly music we like to see as many fans as we can
+
+4
+00:00:11,520 --> 00:00:13,056
+We like going out.
+
+5
+00:00:13,568 --> 00:00:19,712
+We don't get to travel as much as we used to but we're planning to go back to Asia together for a few weeks next.
+
+6
+00:00:19,968 --> 00:00:23,296
+That's where we met in the first place actually
+
+7
+00:00:23,552 --> 00:00:25,600
+About 4 years ago

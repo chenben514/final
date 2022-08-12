@@ -1,0 +1,23 @@
+1
+00:00:00,256 --> 00:00:02,048
+Typescript 46
+
+2
+00:00:02,304 --> 00:00:03,328
+5
+
+3
+00:00:03,584 --> 00:00:08,448
+Hello it's me Maggie
+
+4
+00:00:08,704 --> 00:00:14,848
+You may remember me I'm supposed to be your girlfriend although you wouldn't think so
+
+5
+00:00:15,104 --> 00:00:17,920
+Computer 5 minutes and give me a ring
+
+6
+00:00:18,688 --> 00:00:21,504
+By the way have you heard anything about the tickets for Egypt

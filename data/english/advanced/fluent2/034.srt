@@ -1,0 +1,23 @@
+1
+00:00:00,256 --> 00:00:01,792
+Typescript 14
+
+2
+00:00:05,120 --> 00:00:07,168
+Have you ever been really frightened
+
+3
+00:00:07,424 --> 00:00:13,568
+Yes I have last summer I was driving on the Moto in Spain and we're getting close to Barcelona
+
+4
+00:00:13,824 --> 00:00:19,968
+So I got into the right-hand Lane ready to turn off the motorway when this car screeched
+
+5
+00:00:20,224 --> 00:00:23,552
+Next to me pulled in front of me and slammed on his brakes
+
+6
+00:00:23,808 --> 00:00:29,440
+How I managed to slow down fast enough to avoid in I've never been so frightened in my life

@@ -1,0 +1,91 @@
+1
+00:00:00,256 --> 00:00:01,024
+6
+
+2
+00:00:01,280 --> 00:00:02,304
+News
+
+3
+00:00:03,584 --> 00:00:05,120
+Typescript 22
+
+4
+00:00:06,400 --> 00:00:12,288
+Are the news headlines
+
+5
+00:00:13,056 --> 00:00:19,200
+Severe droughts in Africa the president of the USA has announced that he is going to send food and Provisions
+
+6
+00:00:19,456 --> 00:00:20,736
+To the people of Somalia
+
+7
+00:00:20,992 --> 00:00:23,040
+Who have lost their homes and livelihood
+
+8
+00:00:23,808 --> 00:00:27,136
+Robert Holmes Minister for the environment has resigned
+
+9
+00:00:27,648 --> 00:00:32,768
+The Prime Minister has ordered an investigation into the mysterious disappearance of a large sum of money
+
+10
+00:00:33,280 --> 00:00:38,400
+A spokesman for the minister told us that he was out of the country and not available for comment
+
+11
+00:00:39,168 --> 00:00:44,288
+Schoolgirl pulling Gates has not been allowed back into school after the summer holidays
+
+12
+00:00:44,544 --> 00:00:46,336
+Because she has had her nose pierced
+
+13
+00:00:46,848 --> 00:00:49,152
+According to headmistress Jean Bradley
+
+14
+00:00:49,408 --> 00:00:52,224
+Pulling you the pissing was against the school rules
+
+15
+00:00:52,736 --> 00:00:54,528
+The girl will be allowed back into school
+
+16
+00:00:54,784 --> 00:00:56,576
+When she removes the offending ring
+
+17
+00:00:57,344 --> 00:00:59,392
+And finally to end on a happier note
+
+18
+00:00:59,904 --> 00:01:03,232
+Wedding Bells Are Ringing for 81 year-old Max Williams
+
+19
+00:01:03,488 --> 00:01:06,560
+Who won 16 million pounds in the lottery last month
+
+20
+00:01:07,328 --> 00:01:10,400
+He's going to marry 22 year old dancer Sally Lister
+
+21
+00:01:11,168 --> 00:01:16,032
+The happy couple posed for photographers outside the minion as luxury home in Essex
+
+22
+00:01:16,544 --> 00:01:18,080
+And Sally held out her hand
+
+23
+00:01:18,336 --> 00:01:21,664
+To show off a 10,000-pound engagement ring for the cameras

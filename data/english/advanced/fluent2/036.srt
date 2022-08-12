@@ -1,0 +1,23 @@
+1
+00:00:00,512 --> 00:00:02,048
+Typescript 15
+
+2
+00:00:02,816 --> 00:00:03,584
+George
+
+3
+00:00:05,376 --> 00:00:11,520
+George is it similar to skiing actually it slightly easier and I think it's a lot more exhilarating
+
+4
+00:00:11,776 --> 00:00:17,920
+Is it cheaper no not really the equipment is just expensive what do you need a board
+
+5
+00:00:18,176 --> 00:00:24,320
+Wilson that can cost about 400 lb then you have to have findings to attach your feet to the board
+
+6
+00:00:24,576 --> 00:00:30,720
+Wilson need special clothes and food switch all quite expensive is it a popular skiing with young people

@@ -1,0 +1,7 @@
+1
+00:00:00,256 --> 00:00:06,400
+Typescript 19 Doctor Foster went to Gloucester in a shower
+
+2
+00:00:06,656 --> 00:00:11,776
+Autobrain he stepped in a puddle right up to his middle and never went there again
