@@ -1,1 +1,14 @@
-this is a test on 2022/10/23_13:04
+sudo apt install ubuntu-desktop-minimal
+sudo apt install firefox
+wget https://archive.mariadb.org/mariadb-10.5.9/source/mariadb-10.5.9.tar.gz
+wget https://archive.mariadb.org/mariadb-10.5.9/galera-26.4.7/src/galera-26.4.7.tar.gz
+tar -xvf mariadb-10.5.9.tar.gz
+tar -xvf galera-26.4.7.tar.gz
+sudo vi /etc/apt/sources.list
+sudo apt update
+sudo apt-get build-dep mariadb-server 
+sudo vi ./libmariadb/cmake/ConnectorName.cmake
+sudo cmake -DWITH_WSREP=ON -DWITH_INNODB_DISALLOW_WRITES=ON ./
+sudo make
+sudo make install
+
