@@ -1,6 +1,68 @@
 sudo apt install ubuntu-desktop-minimal
-sudo apt install firefox
-wget https://archive.mariadb.org/mariadb-10.5.9/source/mariadb-10.5.9.tar.gz
+sudo apt install firefox#
+cd /usr/local/src
+sudo wget https://archive.mariadb.org/mariadb-10.5.9/source/mariadb-10.5.9.tar.gz=
+sudo tar -xvf mariadb-10.5.9.tar.gz
+cd mariadb-10.5.9
+sudo vi /etc/apt/sources.list
+sudo apt update
+sudo apt-get build-dep mariadb-server 
+sudo vi ./libmariadb/cmake/ConnectorName.cmake
+sudo useradd -r -d /data/mysqldb -s /sbin/nologin mysql
+
+sudo mkdir -pv /data/mysqldb
+sudo chown -R mysql.mysql /data/mysqldb
+sudo chmod 770 /data/mysqldb
+
+sudo cmake . \
+-DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
+-DCMAKE_BUILD_TYPE=Debug . \
+-DMYSQL_DATADIR=/data/mysqldb/ \
+-DSYSCONFDIR=/etc \
+-DMYSQL_USER=mysql \
+-DWITH_INNOBASE_STORAGE_ENGINE=1 \
+-DWITH_ARCHIVE_STORAGE_ENGINE=1 \
+-DWITH_BLACKHOLE_STORAGE_ENGINE=1 \
+-DWITH_PARTITION_STORAGE_ENGINE=1 \
+-DWITHOUT_MROONGA_STORAGE_ENGINE=1 \
+-DWITH_DEBUG=1 \
+-DWITH_READLINE=1 \
+-DWITH_SSL=system \
+-DWITH_ZLIB=system \
+-DWITH_LIBWRAP=0 \
+-DENABLED_LOCAL_INFILE=1 \
+-DMYSQL_UNIX_ADDR=/usr/loacl/mysql/mysql.sock \
+-DDEFAULT_CHARSET=utf8mb4 \
+-DDEFAULT_COLLATION=utf8mb4_general_ci
+
+ sudo make
+ sudo make install
+ 
+ echo $PATH:/usr/local/mysql/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin > /etc/profile.d/mysql.sh
+ 
+ export PATH=$PATH:/usr/local/mysql/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin
+ cd /usr/local/mysql
+ 
+ sudo scripts/mysql_install_db --user=mysql --datadir=/data/mysqldb --basedir=/usr/local/mysql
+ 
+ sudo scripts/mysql_install_db --user=mysql --datadir=/data/mysqldb
+
+sudo echo PATH:/usr/local/mysql/bin:$PATH > /etc/profile.d/mysql.sh
+
+. /etc/profile.d/mysql.sh
+
+sudo mkdir /data/mysqldb
+sudo chown -R mysql.mysql /data/mysqldb
+sudo chmod 770 /data/mysqldb
+
+sudo cmake -DWITH_WSREP=ON -DWITH_INNODB_DISALLOW_WRITES=ON ./
+sudo make
+sudo make install
+
+
+sudo apt install -y bison bison-devel zlib-devel libcurl-devel libarchive-devel boost-devel gcc gcc-c++ cmake ncurses-devel gnutls-devel libxml2-devel openssl-devel libevent-devel libaio-devel
+
+
 wget https://archive.mariadb.org/mariadb-10.5.9/galera-26.4.7/src/galera-26.4.7.tar.gz
 tar -xvf mariadb-10.5.9.tar.gz
 tar -xvf galera-26.4.7.tar.gz
